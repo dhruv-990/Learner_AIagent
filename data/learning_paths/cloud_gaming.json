@@ -1,0 +1,459 @@
+{
+  "topic": "CLOUD GAMING",
+  "experience_level": "beginner",
+  "time_commitment": "5-10 hours per week",
+  "learning_goals": "",
+  "study_plan": {
+    "topic": "CLOUD GAMING",
+    "experience_level": "beginner",
+    "time_commitment": "5-10 hours per week",
+    "learning_goals": "",
+    "total_weeks": 6,
+    "weekly_goals": [
+      {
+        "week_number": 1,
+        "title": "Introduction to Cloud Gaming",
+        "description": "Understanding the basics of cloud gaming, its benefits and drawbacks, and key players in the industry.",
+        "resources": [
+          {
+            "title": "Learn CLOUD GAMING Introduction to Cloud Gaming - Part 1",
+            "description": "Comprehensive tutorial on CLOUD GAMING Introduction to Cloud Gaming fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_0",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Introduction to Cloud Gaming",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Introduction to Cloud Gaming - Part 2",
+            "description": "Comprehensive tutorial on CLOUD GAMING Introduction to Cloud Gaming fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_1",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Introduction to Cloud Gaming",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Introduction to Cloud Gaming - Part 3",
+            "description": "Comprehensive tutorial on CLOUD GAMING Introduction to Cloud Gaming fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_2",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Introduction to Cloud Gaming",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Awesome-Customer-Analytics",
+            "description": "Customer analytics has been one of hottest buzzwords for years. Few years back it was only marketing department\u2019s monopoly carried out with limited volumes of customer data, which was stored in relational databases like Oracle or appliances like Teradata and Netezza. SAS & SPSS were the leaders in providing customer analytics but it was restricted to conducting segmentation of customers who are likely to buy your products or services. In the 90\u2019s came web analytics, it was more popular for page hits, time on sessions, use of cookies for visitors and then using that for customer analytics.  By the late 2000s, Facebook, Twitter and all the other socialchannels changed the way people interacted with brands and each other. Businesses needed to have a presence on the major social sites to stay relevant. With the digital age things have changed drastically. Customer issuperman now. Their mobile interactions have increased substantially and they leave digital footprint everywhere they go. They are more informed, more connected, always on and looking for exceptionally simple and easy experience. This tsunami of data has changed the customer analytics forever. Today customer analytics is not only restricted to marketing forchurn and retention but more focus is going on how to improve thecustomer experience and is done by every department of the organization. A lot of companies had problems integrating large bulk of customer data between various databases and warehouse systems. They are not completely sure of which key metrics to use for profiling customers. Hence creating customer 360 degree view became the foundation for customer analytics. It can capture all customer interactions which can be used for further analytics.  From the technology perspective, the biggest change is the introduction of big data platforms which can do the analytics very fast on all the data organization has, instead of sampling and segmentation. Then came Cloud based platforms, which can scale up and down as per the need of analysis, so companies didn\u2019t have to invest upfront on infrastructure. Predictive models of customer churn, Retention, Cross-Sell do exist today as well, but they run against more data than ever before. Even analytics has further evolved from descriptive to predictive to prescriptive. Only showing what will happen next is not helping anymore but what actions you need to take is becoming more critical.  There are various ways customer analytics is carried out:  Acquiring all the customer data Understanding the customer journey Applying big data concepts to customer relationships Finding high propensity prospects Upselling by identifying related products and interests Generating customer loyalty by discovering response patterns Predicting customer lifetime value (CLV) Identifying dissatisfied customers & churn patterns Applying predictive analytics Implementing continuous improvement Hyper-personalization is the center stage now which gives your customer the right message, on the right platform, using the right channel, at the right time. Now via Cognitive computing and Artificial Intelligence using IBM Watson, Microsoft and Google cognitive services, customer analytics will become sharper as their deep learning neural network algorithms provide a game changing aspect. Tomorrow there may not be just plain simple customer sentiment analytics based on feedback or surveys or social media, but with help of cognitive it may be what customer\u2019s facial expressions show in real time. There\u2019s no doubt that customer analytics is absolutely essential for brand survival.",
+            "url": "https://github.com/Aghoreshwar/Awesome-Customer-Analytics",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "gcp-guess-who",
+            "description": "Guess who game created with the Google Cloud Platform meant to be an introduction to the platform for Intro to Computer Science (CSC 111 - Fall 2018 at Smith College) Guest Lecture by me.",
+            "url": "https://github.com/tiffanyxiao/gcp-guess-who",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Define cloud gaming and differentiate it from traditional gaming.",
+          "Identify the key components of a cloud gaming system.",
+          "List the advantages and disadvantages of cloud gaming.",
+          "Name major cloud gaming services and platforms."
+        ],
+        "estimated_hours": 2.5,
+        "deadline": "2024-10-27 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 2,
+        "title": "Cloud Gaming Infrastructure",
+        "description": "Exploring the infrastructure behind cloud gaming, including servers, networks, and data centers.",
+        "resources": [
+          {
+            "title": "Learn CLOUD GAMING Cloud Gaming Infrastructure - Part 1",
+            "description": "Comprehensive tutorial on CLOUD GAMING Cloud Gaming Infrastructure fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_0",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Cloud Gaming Infrastructure",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Cloud Gaming Infrastructure - Part 2",
+            "description": "Comprehensive tutorial on CLOUD GAMING Cloud Gaming Infrastructure fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_1",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Cloud Gaming Infrastructure",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Cloud Gaming Infrastructure - Part 3",
+            "description": "Comprehensive tutorial on CLOUD GAMING Cloud Gaming Infrastructure fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_2",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Cloud Gaming Infrastructure",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Awesome-Customer-Analytics",
+            "description": "Customer analytics has been one of hottest buzzwords for years. Few years back it was only marketing department\u2019s monopoly carried out with limited volumes of customer data, which was stored in relational databases like Oracle or appliances like Teradata and Netezza. SAS & SPSS were the leaders in providing customer analytics but it was restricted to conducting segmentation of customers who are likely to buy your products or services. In the 90\u2019s came web analytics, it was more popular for page hits, time on sessions, use of cookies for visitors and then using that for customer analytics.  By the late 2000s, Facebook, Twitter and all the other socialchannels changed the way people interacted with brands and each other. Businesses needed to have a presence on the major social sites to stay relevant. With the digital age things have changed drastically. Customer issuperman now. Their mobile interactions have increased substantially and they leave digital footprint everywhere they go. They are more informed, more connected, always on and looking for exceptionally simple and easy experience. This tsunami of data has changed the customer analytics forever. Today customer analytics is not only restricted to marketing forchurn and retention but more focus is going on how to improve thecustomer experience and is done by every department of the organization. A lot of companies had problems integrating large bulk of customer data between various databases and warehouse systems. They are not completely sure of which key metrics to use for profiling customers. Hence creating customer 360 degree view became the foundation for customer analytics. It can capture all customer interactions which can be used for further analytics.  From the technology perspective, the biggest change is the introduction of big data platforms which can do the analytics very fast on all the data organization has, instead of sampling and segmentation. Then came Cloud based platforms, which can scale up and down as per the need of analysis, so companies didn\u2019t have to invest upfront on infrastructure. Predictive models of customer churn, Retention, Cross-Sell do exist today as well, but they run against more data than ever before. Even analytics has further evolved from descriptive to predictive to prescriptive. Only showing what will happen next is not helping anymore but what actions you need to take is becoming more critical.  There are various ways customer analytics is carried out:  Acquiring all the customer data Understanding the customer journey Applying big data concepts to customer relationships Finding high propensity prospects Upselling by identifying related products and interests Generating customer loyalty by discovering response patterns Predicting customer lifetime value (CLV) Identifying dissatisfied customers & churn patterns Applying predictive analytics Implementing continuous improvement Hyper-personalization is the center stage now which gives your customer the right message, on the right platform, using the right channel, at the right time. Now via Cognitive computing and Artificial Intelligence using IBM Watson, Microsoft and Google cognitive services, customer analytics will become sharper as their deep learning neural network algorithms provide a game changing aspect. Tomorrow there may not be just plain simple customer sentiment analytics based on feedback or surveys or social media, but with help of cognitive it may be what customer\u2019s facial expressions show in real time. There\u2019s no doubt that customer analytics is absolutely essential for brand survival.",
+            "url": "https://github.com/Aghoreshwar/Awesome-Customer-Analytics",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "solutions-cloud-orchestrate",
+            "description": "Plan, deploy, and manage an entire cloud-based infrastructure for creating and managing a virtual production environment.",
+            "url": "https://github.com/GoogleCloudPlatform/solutions-cloud-orchestrate",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "animation",
+              "cloud",
+              "gaming",
+              "google-cloud",
+              "virtual-machines",
+              "visual-effects"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Explain the role of data centers in cloud gaming.",
+          "Describe the importance of low-latency networks.",
+          "Understand the concept of edge computing in cloud gaming.",
+          "Discuss the challenges of delivering high-quality streaming."
+        ],
+        "estimated_hours": 5.0,
+        "deadline": "2024-11-03 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 3,
+        "title": "Streaming Technology and Compression",
+        "description": "Understanding the technology used to stream games, focusing on video and audio compression.",
+        "resources": [
+          {
+            "title": "Learn CLOUD GAMING Streaming Technology and Compression - Part 1",
+            "description": "Comprehensive tutorial on CLOUD GAMING Streaming Technology and Compression fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_0",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Streaming Technology and Compression",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Streaming Technology and Compression - Part 2",
+            "description": "Comprehensive tutorial on CLOUD GAMING Streaming Technology and Compression fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_1",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Streaming Technology and Compression",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Streaming Technology and Compression - Part 3",
+            "description": "Comprehensive tutorial on CLOUD GAMING Streaming Technology and Compression fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_2",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Streaming Technology and Compression",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Explain the process of game streaming.",
+          "Discuss different video and audio codecs used in cloud gaming.",
+          "Understand the concept of bitrate and its impact on quality.",
+          "Explain the importance of low latency encoding and decoding."
+        ],
+        "estimated_hours": 3.5,
+        "deadline": "2024-11-10 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 4,
+        "title": "Cloud Gaming Platforms and Services",
+        "description": "A deep dive into various cloud gaming platforms and their services.",
+        "resources": [
+          {
+            "title": "Learn CLOUD GAMING Cloud Gaming Platforms and Services - Part 1",
+            "description": "Comprehensive tutorial on CLOUD GAMING Cloud Gaming Platforms and Services fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_0",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Cloud Gaming Platforms and Services",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Cloud Gaming Platforms and Services - Part 2",
+            "description": "Comprehensive tutorial on CLOUD GAMING Cloud Gaming Platforms and Services fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_1",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Cloud Gaming Platforms and Services",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Cloud Gaming Platforms and Services - Part 3",
+            "description": "Comprehensive tutorial on CLOUD GAMING Cloud Gaming Platforms and Services fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_2",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Cloud Gaming Platforms and Services",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Awesome-Customer-Analytics",
+            "description": "Customer analytics has been one of hottest buzzwords for years. Few years back it was only marketing department\u2019s monopoly carried out with limited volumes of customer data, which was stored in relational databases like Oracle or appliances like Teradata and Netezza. SAS & SPSS were the leaders in providing customer analytics but it was restricted to conducting segmentation of customers who are likely to buy your products or services. In the 90\u2019s came web analytics, it was more popular for page hits, time on sessions, use of cookies for visitors and then using that for customer analytics.  By the late 2000s, Facebook, Twitter and all the other socialchannels changed the way people interacted with brands and each other. Businesses needed to have a presence on the major social sites to stay relevant. With the digital age things have changed drastically. Customer issuperman now. Their mobile interactions have increased substantially and they leave digital footprint everywhere they go. They are more informed, more connected, always on and looking for exceptionally simple and easy experience. This tsunami of data has changed the customer analytics forever. Today customer analytics is not only restricted to marketing forchurn and retention but more focus is going on how to improve thecustomer experience and is done by every department of the organization. A lot of companies had problems integrating large bulk of customer data between various databases and warehouse systems. They are not completely sure of which key metrics to use for profiling customers. Hence creating customer 360 degree view became the foundation for customer analytics. It can capture all customer interactions which can be used for further analytics.  From the technology perspective, the biggest change is the introduction of big data platforms which can do the analytics very fast on all the data organization has, instead of sampling and segmentation. Then came Cloud based platforms, which can scale up and down as per the need of analysis, so companies didn\u2019t have to invest upfront on infrastructure. Predictive models of customer churn, Retention, Cross-Sell do exist today as well, but they run against more data than ever before. Even analytics has further evolved from descriptive to predictive to prescriptive. Only showing what will happen next is not helping anymore but what actions you need to take is becoming more critical.  There are various ways customer analytics is carried out:  Acquiring all the customer data Understanding the customer journey Applying big data concepts to customer relationships Finding high propensity prospects Upselling by identifying related products and interests Generating customer loyalty by discovering response patterns Predicting customer lifetime value (CLV) Identifying dissatisfied customers & churn patterns Applying predictive analytics Implementing continuous improvement Hyper-personalization is the center stage now which gives your customer the right message, on the right platform, using the right channel, at the right time. Now via Cognitive computing and Artificial Intelligence using IBM Watson, Microsoft and Google cognitive services, customer analytics will become sharper as their deep learning neural network algorithms provide a game changing aspect. Tomorrow there may not be just plain simple customer sentiment analytics based on feedback or surveys or social media, but with help of cognitive it may be what customer\u2019s facial expressions show in real time. There\u2019s no doubt that customer analytics is absolutely essential for brand survival.",
+            "url": "https://github.com/Aghoreshwar/Awesome-Customer-Analytics",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "CloudWarrior",
+            "description": "CloudWarrior: Unleashing Gaming Beyond Boundaries \u2601\ufe0f\u2694\ufe0fIntroducing CloudWarrior, a state-of-the-art video gaming platform hosted on Amazon Web Services (AWS), leveraging the power of CloudWatch, EC2, and Amazon QuickSight. ",
+            "url": "https://github.com/MiChaelinzo/CloudWarrior",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Compare and contrast different cloud gaming platforms (e.g., GeForce Now, Stadia, Xbox Cloud Gaming).",
+          "Evaluate the features and pricing models of different platforms.",
+          "Research the game libraries offered by each platform."
+        ],
+        "estimated_hours": 5.0,
+        "deadline": "2024-11-17 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 5,
+        "title": "Business Models and Future Trends",
+        "description": "Exploring the business models of cloud gaming companies and future trends in the industry.",
+        "resources": [
+          {
+            "title": "Learn CLOUD GAMING Business Models and Future Trends - Part 1",
+            "description": "Comprehensive tutorial on CLOUD GAMING Business Models and Future Trends fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_0",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Business Models and Future Trends",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Business Models and Future Trends - Part 2",
+            "description": "Comprehensive tutorial on CLOUD GAMING Business Models and Future Trends fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_1",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Business Models and Future Trends",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Business Models and Future Trends - Part 3",
+            "description": "Comprehensive tutorial on CLOUD GAMING Business Models and Future Trends fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_2",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Business Models and Future Trends",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Identify different business models in cloud gaming.",
+          "Discuss the challenges and opportunities for cloud gaming.",
+          "Research the future trends and potential of cloud gaming."
+        ],
+        "estimated_hours": 4.0,
+        "deadline": "2024-11-24 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 6,
+        "title": "Project: Cloud Gaming Service Review",
+        "description": "Create a comprehensive review of a chosen cloud gaming service, highlighting its pros and cons.",
+        "resources": [
+          {
+            "title": "Learn CLOUD GAMING Project: Cloud Gaming Service Review - Part 1",
+            "description": "Comprehensive tutorial on CLOUD GAMING Project: Cloud Gaming Service Review fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_0",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Project: Cloud Gaming Service Review",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Project: Cloud Gaming Service Review - Part 2",
+            "description": "Comprehensive tutorial on CLOUD GAMING Project: Cloud Gaming Service Review fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_1",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Project: Cloud Gaming Service Review",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn CLOUD GAMING Project: Cloud Gaming Service Review - Part 3",
+            "description": "Comprehensive tutorial on CLOUD GAMING Project: Cloud Gaming Service Review fundamentals and advanced concepts.",
+            "url": "https://www.youtube.com/watch?v=mock_2",
+            "resource_type": "youtube_video",
+            "duration": "15:30",
+            "difficulty": null,
+            "tags": [
+              "CLOUD GAMING Project: Cloud Gaming Service Review",
+              "tutorial",
+              "learning",
+              "education"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Choose a cloud gaming service to review.",
+          "Conduct thorough research on the chosen service.",
+          "Write a detailed review including technical aspects and user experience.",
+          "Present your findings in a clear and concise manner."
+        ],
+        "estimated_hours": 7.0,
+        "deadline": "2024-12-01 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      }
+    ],
+    "created_at": "2025-07-20 12:27:45.818746",
+    "last_updated": "2025-07-20 12:27:45.818746",
+    "overall_progress": 0.0
+  },
+  "progress_updates": [],
+  "adaptive_recommendations": [],
+  "created_at": "2025-07-20 12:27:45.818746",
+  "last_updated": "2025-07-20 12:27:45.818746"
+}

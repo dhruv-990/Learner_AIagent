@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Mentor Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .loading {
+            display: none;
+        }
+        .loading.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-graduation-cap text-4xl"></i>
+                    <div>
+                        <h1 class="text-3xl font-bold">Learning Path Mentor Bot</h1>
+                        <p class="text-blue-100">Your AI-powered learning companion</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/progress-dashboard" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all">
+                        <i class="fas fa-chart-line mr-2"></i>Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Hero Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Create Your Personalized Learning Path</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Get a customized study plan with YouTube videos, GitHub projects, and adaptive recommendations based on your progress.
+            </p>
+        </div>
+
+        <!-- Learning Path Form -->
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8 card-hover">
+                <form id="learningPathForm" class="space-y-6">
+                    <!-- Topic Input -->
+                    <div>
+                        <label for="topic" class="block text-lg font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>What do you want to learn?
+                        </label>
+                        <input 
+                            type="text" 
+                            id="topic" 
+                            name="topic" 
+                            placeholder="e.g., Web3, DevOps, Machine Learning, React..."
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-lg"
+                            required
+                        >
+                    </div>
+
+                    <!-- Experience Level -->
+                    <div>
+                        <label for="experience_level" class="block text-lg font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-user-graduate text-blue-500 mr-2"></i>Your Experience Level
+                        </label>
+                        <select 
+                            id="experience_level" 
+                            name="experience_level"
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-lg"
+                        >
+                            <option value="beginner">Beginner - New to the topic</option>
+                            <option value="intermediate">Intermediate - Some experience</option>
+                            <option value="advanced">Advanced - Looking to master</option>
+                        </select>
+                    </div>
+
+                    <!-- Time Commitment -->
+                    <div>
+                        <label for="time_commitment" class="block text-lg font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-clock text-green-500 mr-2"></i>Weekly Time Commitment
+                        </label>
+                        <select 
+                            id="time_commitment" 
+                            name="time_commitment"
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-lg"
+                        >
+                            <option value="2-5 hours per week">2-5 hours per week</option>
+                            <option value="5-10 hours per week" selected>5-10 hours per week</option>
+                            <option value="10-20 hours per week">10-20 hours per week</option>
+                            <option value="20+ hours per week">20+ hours per week</option>
+                        </select>
+                    </div>
+
+                    <!-- Learning Goals -->
+                    <div>
+                        <label for="learning_goals" class="block text-lg font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-bullseye text-purple-500 mr-2"></i>Learning Goals (Optional)
+                        </label>
+                        <textarea 
+                            id="learning_goals" 
+                            name="learning_goals" 
+                            placeholder="What specific skills or knowledge do you want to gain? (e.g., Build a Web3 dApp, Master DevOps practices, Create ML models...)"
+                            rows="3"
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all text-lg resize-none"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button 
+                            type="submit" 
+                            id="submitBtn"
+                            class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-4 px-8 rounded-lg hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 text-lg"
+                        >
+                            <i class="fas fa-magic mr-2"></i>Create My Learning Path
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="loading text-center py-8">
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
+                    <p class="text-lg text-gray-600">Creating your personalized learning path...</p>
+                    <p class="text-sm text-gray-500 mt-2">This may take a few moments</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="mt-16 grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-youtube text-3xl text-red-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">YouTube Integration</h3>
+                <p class="text-gray-600">Curated educational videos from top creators in your field</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-github text-3xl text-gray-800"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">GitHub Projects</h3>
+                <p class="text-gray-600">Hands-on projects and code examples to practice with</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 shadow-lg card-hover text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-brain text-3xl text-purple-500"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">AI-Powered</h3>
+                <p class="text-gray-600">Adaptive recommendations based on your progress and challenges</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col">
+                <div class="p-6 border-b border-gray-200 flex-shrink-0 bg-white rounded-t-2xl">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-2xl font-bold text-gray-800">Your Learning Path</h2>
+                        <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 p-2">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex-1 overflow-y-auto p-6" style="max-height: calc(90vh - 120px);">
+                    <div id="learningPathContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('learningPathForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                topic: formData.get('topic'),
+                experience_level: formData.get('experience_level'),
+                time_commitment: formData.get('time_commitment'),
+                learning_goals: formData.get('learning_goals')
+            };
+
+            // Show loading state
+            document.getElementById('submitBtn').style.display = 'none';
+            document.getElementById('loadingState').classList.add('show');
+
+            try {
+                const response = await fetch('/create-learning-path', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayLearningPath(result.learning_path);
+                } else {
+                    alert('Error creating learning path: ' + result.detail);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while creating your learning path.');
+            } finally {
+                // Hide loading state
+                document.getElementById('submitBtn').style.display = 'block';
+                document.getElementById('loadingState').classList.remove('show');
+            }
+        });
+
+        function displayLearningPath(learningPath) {
+            const content = document.getElementById('learningPathContent');
+            
+            // Debug: Log the learning path data
+            console.log('Learning Path Data:', learningPath);
+            
+            let html = `
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">${learningPath.topic}</h3>
+                    <div class="flex space-x-4 text-sm text-gray-600">
+                        <span><i class="fas fa-user-graduate mr-1"></i>${learningPath.experience_level}</span>
+                        <span><i class="fas fa-clock mr-1"></i>${learningPath.time_commitment}</span>
+                    </div>
+                </div>
+            `;
+
+            if (learningPath.learning_goals) {
+                html += `
+                    <div class="mb-6 p-4 bg-blue-50 rounded-lg">
+                        <h4 class="font-semibold text-gray-800 mb-2">Learning Goals:</h4>
+                        <p class="text-gray-700">${learningPath.learning_goals}</p>
+                    </div>
+                `;
+            }
+
+            html += '<div class="space-y-6">';
+            
+            learningPath.study_plan.weekly_goals.forEach((goal, index) => {
+                html += `
+                    <div class="border-2 border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-bold text-gray-800">Week ${goal.week_number}: ${goal.title}</h4>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                ${goal.estimated_hours} hours
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">${goal.description}</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Objectives:</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                ${goal.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">Resources:</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                ${goal.resources.map(resource => {
+                                    // Debug: Log each resource
+                                    console.log('Resource:', resource);
+                                    return `
+                                    <div class="border border-gray-200 rounded-lg p-3">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="flex-shrink-0">
+                                                ${resource.resource_type === 'youtube_video' ? 
+                                                    '<i class="fab fa-youtube text-red-500 text-lg"></i>' :
+                                                    '<i class="fab fa-github text-gray-800 text-lg"></i>'
+                                                }
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <h6 class="font-medium text-gray-800 truncate">${resource.title}</h6>
+                                                <p class="text-sm text-gray-600 line-clamp-2">${resource.description}</p>
+                                                <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="text-blue-500 text-sm hover:underline inline-flex items-center" onclick="console.log('Opening URL:', '${resource.url}')">
+                                                    View Resource <i class="fas fa-external-link-alt ml-1"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `}).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+
+            content.innerHTML = html;
+            document.getElementById('resultsModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('resultsModal').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('resultsModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html> 
