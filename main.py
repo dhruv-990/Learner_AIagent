@@ -25,12 +25,31 @@ app = FastAPI(title="Learning Path Mentor Bot", version="1.0.0")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-# Initialize services
-# You can change the provider to "perplexity" if you prefer
-ai_service = AIService(provider="gemini")  # or "perplexity"
-youtube_service = YouTubeService()
-notion_service = NotionService()
-learning_path_service = LearningPathService(ai_service, youtube_service, notion_service)
+# Initialize services (lazy initialization to avoid startup crashes)
+ai_service = None
+youtube_service = None
+notion_service = None
+learning_path_service = None
+
+def get_services():
+    """Get or initialize services"""
+    global ai_service, youtube_service, notion_service, learning_path_service
+    
+    if ai_service is None:
+        try:
+            ai_service = AIService(provider="gemini")
+            youtube_service = YouTubeService()
+            notion_service = NotionService()
+            learning_path_service = LearningPathService(ai_service, youtube_service, notion_service)
+        except Exception as e:
+            print(f"Warning: Service initialization failed: {e}")
+            # Create fallback services
+            ai_service = AIService(provider="gemini")
+            youtube_service = YouTubeService()
+            notion_service = NotionService()
+            learning_path_service = LearningPathService(ai_service, youtube_service, notion_service)
+    
+    return ai_service, youtube_service, notion_service, learning_path_service
 
 class TopicRequest(BaseModel):
     topic: str
@@ -53,6 +72,7 @@ async def home(request: Request):
 async def create_learning_path(request: TopicRequest):
     """Create a personalized learning path for a given topic"""
     try:
+        _, _, _, learning_path_service = get_services()
         learning_path = await learning_path_service.create_learning_path(
             topic=request.topic,
             experience_level=request.experience_level,
@@ -67,6 +87,7 @@ async def create_learning_path(request: TopicRequest):
 async def update_progress(request: ProgressUpdateRequest):
     """Update progress and get adaptive recommendations"""
     try:
+        _, _, _, learning_path_service = get_services()
         updated_plan = await learning_path_service.update_progress(
             topic=request.topic,
             completed_items=request.completed_items,
@@ -81,6 +102,7 @@ async def update_progress(request: ProgressUpdateRequest):
 async def get_learning_path(topic: str):
     """Get existing learning path for a topic"""
     try:
+        _, _, _, learning_path_service = get_services()
         learning_path = await learning_path_service.get_learning_path(topic)
         if learning_path:
             return {"success": True, "learning_path": learning_path.model_dump()}
@@ -93,6 +115,7 @@ async def get_learning_path(topic: str):
 async def get_youtube_resources(topic: str, max_results: int = 10):
     """Get YouTube resources for a specific topic"""
     try:
+        _, youtube_service, _, _ = get_services()
         videos = await youtube_service.search_educational_videos(topic, max_results)
         return {"success": True, "videos": videos}
     except Exception as e:
@@ -102,10 +125,16 @@ async def get_youtube_resources(topic: str, max_results: int = 10):
 async def get_github_projects(topic: str, max_results: int = 10):
     """Get GitHub projects for a specific topic"""
     try:
+        _, _, _, learning_path_service = get_services()
         projects = await learning_path_service.get_github_projects(topic, max_results)
         return {"success": True, "projects": projects}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for deployment"""
+    return {"status": "healthy", "message": "Learning Path Mentor Bot is running!"}
 
 @app.get("/progress-dashboard")
 async def progress_dashboard(request: Request):
