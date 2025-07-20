@@ -35,7 +35,17 @@ pip install -r requirements.txt
 ```
 
 ### 3. Environment Configuration
-Create a `.env` file in the root directory with your API keys:
+Copy the example environment file and add your API keys:
+
+```bash
+# Copy the example file
+cp env_example.txt .env
+
+# Edit the .env file with your API keys
+# NEVER commit your .env file to version control!
+```
+
+Your `.env` file should look like this:
 
 ```env
 # AI Provider (choose one)
@@ -47,7 +57,7 @@ PERPLEXITY_API_KEY=your_perplexity_api_key_here
 YOUTUBE_API_KEY=your_youtube_api_key_here
 
 # Notion API Configuration (Optional)
-NOTION_API_KEY=your_notion_api_key_here
+NOTION_TOKEN=your_notion_token_here
 NOTION_DATABASE_ID=your_notion_database_id_here
 
 # Application Configuration
@@ -236,6 +246,26 @@ python main.py
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔒 Security & Privacy
+
+### ⚠️ Important Security Notes:
+- **NEVER commit your `.env` file** to version control
+- **NEVER share your API keys** publicly
+- The `.gitignore` file is configured to exclude sensitive files
+- Use environment variables for all API keys
+
+### Safe to Push to GitHub:
+- ✅ Source code
+- ✅ Documentation
+- ✅ Configuration templates
+- ✅ Requirements file
+
+### NOT Safe to Push to GitHub:
+- ❌ `.env` file (contains real API keys)
+- ❌ Any files with API keys
+- ❌ Database files
+- ❌ Log files with sensitive data
 
 ## 🆘 Support
 
