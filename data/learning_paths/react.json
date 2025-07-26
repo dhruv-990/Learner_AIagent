@@ -1,0 +1,671 @@
+{
+  "topic": "React",
+  "experience_level": "advanced",
+  "time_commitment": "5-10 hours per week",
+  "learning_goals": "",
+  "study_plan": {
+    "topic": "React",
+    "experience_level": "advanced",
+    "time_commitment": "5-10 hours per week",
+    "learning_goals": "",
+    "total_weeks": 6,
+    "weekly_goals": [
+      {
+        "week_number": 1,
+        "title": "Advanced React Hooks & Context API Mastery",
+        "description": "Deep dive into advanced hook usage and complex state management with Context API and custom hooks.",
+        "resources": [
+          {
+            "title": "Course Outline for Complete React Developer in 2025 (w/ Redux, Hooks, GraphQL): Zero to Mastery",
+            "description": "Learn React from scratch and get hired as a React Developer! This is the only React JS tutorial + projects course you need to ...",
+            "url": "https://www.youtube.com/watch?v=SVVRYuDcHqU",
+            "resource_type": "youtube_video",
+            "duration": "PT4M58S",
+            "difficulty": null,
+            "tags": [
+              "react",
+              "learntocode",
+              "react developer",
+              "learn react"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Reactjs Tutorial For Beginners - Part 24 | List of Hooks in React",
+            "description": "reactjs tutorial for beginners, reactjs tutorial, react js crash course, react js project, reactjs tutorial, reactjs tutorial 2023, reactjs ...",
+            "url": "https://www.youtube.com/watch?v=I_v_BPr3iaY",
+            "resource_type": "youtube_video",
+            "duration": "PT4M41S",
+            "difficulty": null,
+            "tags": [
+              "reactjs tutorial for beginners",
+              "React Tutorial",
+              "React Tutorial for Beginners",
+              "React Basics",
+              "React Fundamentals",
+              "Reactjs",
+              "Reactjs Tutorial",
+              "Reactjs Tutorial for Beginners",
+              "React.js",
+              "React js",
+              "react js tutorial 2023",
+              "react js hooks",
+              "hooks in reactjs",
+              "reactjs hooks",
+              "reactjs list of hooks",
+              "list of hooks in react"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Mastering React.js: Your Ultimate Roadmap to Success | Beginner to Advance #reactjs #roadmap #apple",
+            "description": "Welcome to the ultimate React.js roadmap! Whether you're a beginner looking to kickstart your journey or an experienced ...",
+            "url": "https://www.youtube.com/watch?v=Iv5lscLj3MU",
+            "resource_type": "youtube_video",
+            "duration": "PT8M52S",
+            "difficulty": null,
+            "tags": [
+              "react js",
+              "web development",
+              "javascript",
+              "react.js",
+              "learn react js",
+              "react course",
+              "learn reactjs",
+              "react js tutorial",
+              "reactjs course",
+              "react",
+              "react basics",
+              "react crash course",
+              "learn react",
+              "create react app",
+              "reactjs tutorial",
+              "react fundamentals",
+              "tutorial",
+              "crash course",
+              "react roadmap",
+              "react roadmap 2024",
+              "react developer roadmap",
+              "react developer roadmap 2024",
+              "react component",
+              "react a to z",
+              "react hooks tutorial",
+              "react hooks explained",
+              "learn react 2024",
+              "frontend development"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Master custom hook creation and usage.",
+          "Effectively manage complex state with Context API.",
+          "Understand and implement useReducer for complex state logic.",
+          "Optimize performance with useMemo and useCallback."
+        ],
+        "estimated_hours": 7.0,
+        "deadline": "2024-10-27 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 2,
+        "title": "Testing and Debugging in React",
+        "description": "Improve testing and debugging skills for larger React applications.",
+        "resources": [
+          {
+            "title": "Unit Testing |In React | In Hindi | React Testing Tutorial | How To Test React | Debugging Unit Test",
+            "description": "Unit Testing |In React | In Hindi | React Testing Tutorial | How To Test React | Debugging Unit Test Description: Welcome to our ...",
+            "url": "https://www.youtube.com/watch?v=hSoaox5S-DA",
+            "resource_type": "youtube_video",
+            "duration": "PT13M15S",
+            "difficulty": null,
+            "tags": [
+              "#coding",
+              "#unittesting",
+              "#unittestinginreact",
+              "#Testing",
+              "#unit test",
+              "#React",
+              "#React unit testing"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn the Art of Debugging from ex-Microsoft | Tanay Pratap Hindi",
+            "description": "Learn essential debugging techniques for efficient coding. From using debuggers and logs to unconventional methods like rubber ...",
+            "url": "https://www.youtube.com/watch?v=qWyTIdbnFrI",
+            "resource_type": "youtube_video",
+            "duration": "PT10M27S",
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "React Roadmap for developers 2021 | React Learning path step by step | React project ideas",
+            "description": "In this video, we are going to learn about the complete roadmap to learn React. It will be helpful for those who are planning to start ...",
+            "url": "https://www.youtube.com/watch?v=tehWvXcYkG4",
+            "resource_type": "youtube_video",
+            "duration": "PT18M27S",
+            "difficulty": null,
+            "tags": [
+              "#react",
+              "#roadmap",
+              "#javascript",
+              "#developer"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "react-ab-test",
+            "description": "A/B testing React components and debug tools. Isomorphic with a simple, universal interface. Well documented and lightweight. Tested in popular browsers and Node.js. Includes helpers for Mixpanel and Segment.com.",
+            "url": "https://github.com/pushtell/react-ab-test",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "dyna-ts-react-module-boilerplate",
+            "description": "Typescript react module boilerplate. Develop, debug, test and distribute react components as modules written in typscript.",
+            "url": "https://github.com/aneldev/dyna-ts-react-module-boilerplate",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "boilerplate",
+              "builder",
+              "coverage",
+              "debug",
+              "javascript",
+              "react",
+              "test",
+              "typescript",
+              "universal"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Write effective unit and integration tests.",
+          "Implement various testing methodologies (e.g., snapshot testing).",
+          "Use debugging tools for complex React applications.",
+          "Understand and implement code coverage."
+        ],
+        "estimated_hours": 6.0,
+        "deadline": "2024-11-03 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 3,
+        "title": "React Performance Optimization",
+        "description": "Learn techniques to optimize the performance of your React applications.",
+        "resources": [
+          {
+            "title": "React Native Performance Optimisation (useMemo, useCallback, memo)",
+            "description": "In this video, we'll show you how to improve the performance of your application by employing three distinct techniques: useMemo ...",
+            "url": "https://www.youtube.com/watch?v=DXhcbMvNX04",
+            "resource_type": "youtube_video",
+            "duration": "PT17M2S",
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Boost React Performance \u26a1 Master useMemo &amp; useCallback for Blazing-Fast Apps",
+            "description": "Supercharge your React apps by mastering useMemo and useCallback\u2014two of the most powerful hooks for performance ...",
+            "url": "https://www.youtube.com/watch?v=ScJS31MvCPk",
+            "resource_type": "youtube_video",
+            "duration": "PT9M39S",
+            "difficulty": null,
+            "tags": [
+              "React performance",
+              "useMemo",
+              "useCallback",
+              "React hooks tutorial",
+              "optimize React app",
+              "frontend performance",
+              "React best practices",
+              "prevent re-renders",
+              "memoization",
+              "React useMemo vs useCallback",
+              "advanced React",
+              "React efficiency",
+              "improve React UI",
+              "high-performance apps",
+              "react optimization tips",
+              "React dev tutorial",
+              "async rendering React",
+              "slow React fix",
+              "real-world React apps",
+              "frontend engineering"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "[ENG] React Native - Hermes Javascript Engine: Technical details, my thoughts",
+            "description": "Hi Everyone ! In this video i will be talking about Hermes JS Engine and will be talking about technical details, performance ...",
+            "url": "https://www.youtube.com/watch?v=lHDc4x9Wb6c",
+            "resource_type": "youtube_video",
+            "duration": "PT11M6S",
+            "difficulty": null,
+            "tags": [
+              "react native",
+              "hermes",
+              "javascript"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "reactopt",
+            "description": "A CLI React performance optimization tool that identifies potential unnecessary re-rendering",
+            "url": "https://github.com/reactopt/reactopt",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "chromium",
+              "command-line-interface",
+              "commandline",
+              "commandline-interface",
+              "component",
+              "developer-tools",
+              "javascript",
+              "npm",
+              "npm-module",
+              "npm-package",
+              "optimization",
+              "puppeteer",
+              "react",
+              "react-component",
+              "react-devtools",
+              "reactjs",
+              "testing",
+              "testing-tools"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "uber-mobile-web",
+            "description": "This is an attempt to mock the new uber app into mobile web to learn how react can be used to optimize for mobile web.",
+            "url": "https://github.com/narendrashetty/uber-mobile-web",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "mobile-web",
+              "performance",
+              "pwa",
+              "react",
+              "uber"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Identify and fix performance bottlenecks.",
+          "Implement code splitting and lazy loading.",
+          "Use React.memo and useMemo for component optimization.",
+          "Understand and utilize virtualized lists."
+        ],
+        "estimated_hours": 5.0,
+        "deadline": "2024-11-10 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 4,
+        "title": "Advanced Routing with React Router",
+        "description": "Explore advanced features of React Router for complex navigation.",
+        "resources": [
+          {
+            "title": "React Advanced Route Config and Code Splitting | PT 18 | React Router V6 | Full Course 2024",
+            "description": "React Advanced Route Config and Code Splitting | PT 18t | React Router V6 | Full Course 2024 In this video we will learn ...",
+            "url": "https://www.youtube.com/watch?v=HjZqRFRMfk4",
+            "resource_type": "youtube_video",
+            "duration": "PT12M33S",
+            "difficulty": null,
+            "tags": [
+              "react router",
+              "react router v6",
+              "routing in react",
+              "react router full course",
+              "react router for beginners",
+              "react router v6 for beginners",
+              "react router 2024",
+              "react code splitting",
+              "react route configuration",
+              "react advanced route config and code splitting"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "How to use React Router version 6 | Basics of React Router v6",
+            "description": "In this video, we will be seeing how we can integrate our React application with version 6 of react-router. Since react-router has ...",
+            "url": "https://www.youtube.com/watch?v=36lzOdZwvKI",
+            "resource_type": "youtube_video",
+            "duration": "PT8M52S",
+            "difficulty": null,
+            "tags": [
+              "react",
+              "react router",
+              "react router v6",
+              "react router version 6",
+              "latest react router",
+              "routing",
+              "react routing",
+              "routing in react",
+              "links in react",
+              "routes in react",
+              "routes",
+              "ui routes",
+              "v6",
+              "react router dom",
+              "react-router",
+              "react-router-dom",
+              "react-router v6"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "ReactJS Course [8] - React Router Dom | Routes in React",
+            "description": "React Beginner to Advanced Course 2022! In this course I will be going over everything you need to know to go from a complete ...",
+            "url": "https://www.youtube.com/watch?v=ehvS1Hp90KU",
+            "resource_type": "youtube_video",
+            "duration": "PT17M18S",
+            "difficulty": null,
+            "tags": [
+              "css",
+              "javascript",
+              "learn reactjs",
+              "react tutorial",
+              "reactjs",
+              "reactjs beginner",
+              "reactjs tutorial",
+              "typescript",
+              "react js crash course",
+              "react js",
+              "node js",
+              "express js",
+              "pedrotech",
+              "traversy media",
+              "traversymedia",
+              "clever programmer",
+              "tech with tim",
+              "freecodecamp",
+              "deved",
+              "pedro tech",
+              "react course",
+              "reactjs course",
+              "react beginner course",
+              "complete react course beginner to advanced",
+              "code ninja",
+              "code evolution",
+              "learn react",
+              "react beginner tutorial",
+              "react router",
+              "react router dom",
+              "react router v6",
+              "route"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "React-Redux-Saga-Advanced-Starter",
+            "description": "Boilerplate for Advanced usage with React, Redux, React-Router-Redux, Redux-Saga, Immutable, Reselect, Recompose, Axios, HMR, Babel v7, Jest,  Eslint, and more",
+            "url": "https://github.com/KaiHotz/React-Redux-Saga-Advanced-Starter",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "axios",
+              "boilerplate",
+              "boilerplate-front-end",
+              "eslint",
+              "javascipt",
+              "react",
+              "redux",
+              "redux-saga",
+              "webpack"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "PERN-Advanced-Starter",
+            "description": "Advanced PERN stack starter kit (PostgresSQL, Express, React, & Node), complete with ESLint, Webpack 4, Redux, React-Router, and Material-UI kit. ",
+            "url": "https://github.com/tg970/PERN-Advanced-Starter",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "babel",
+              "babel-es6",
+              "express",
+              "material-design",
+              "material-ui",
+              "node",
+              "pg-promise",
+              "postgresql",
+              "react",
+              "react-redux",
+              "react-router",
+              "react-router-dom",
+              "redux",
+              "webpack",
+              "webpack4"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Implement nested routes and route parameters.",
+          "Use route guards and redirects.",
+          "Customize React Router's behavior.",
+          "Understand and use React Router's data fetching capabilities."
+        ],
+        "estimated_hours": 5.0,
+        "deadline": "2024-11-17 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 5,
+        "title": "Building a Complex React Application",
+        "description": "Build a challenging application to apply learned concepts.",
+        "resources": [
+          {
+            "title": "Learn React - Build a React Learning Platform - Authoring Tools Demo",
+            "description": "Hi Everyone and welcome to my brand new channel. In this video, I will run through a quick demo of Moskool's Admin page and ...",
+            "url": "https://www.youtube.com/watch?v=7AbDuPPEbaQ",
+            "resource_type": "youtube_video",
+            "duration": "PT8M55S",
+            "difficulty": null,
+            "tags": [
+              "React",
+              "firebase",
+              "firestore",
+              "collections",
+              "learn",
+              "frontend",
+              "development",
+              "software",
+              "app dev",
+              "build an app",
+              "lxp",
+              "learning experience platform"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "How To Learn React",
+            "description": "HowTo #Learn #React.",
+            "url": "https://www.youtube.com/watch?v=w6F3ePCQuSY",
+            "resource_type": "youtube_video",
+            "duration": "PT6M45S",
+            "difficulty": null,
+            "tags": [
+              "codingwithbasir",
+              "coding",
+              "programming",
+              "tutorial",
+              "lesson",
+              "codepen"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "ReactJS Projects | What is ReactJS | ReactJS Tutorial for beginners | ReactJS Training | Edureka",
+            "description": "React with Redux Certification Training (Use Code: YOUTUBE20) ...",
+            "url": "https://www.youtube.com/watch?v=exeLvSxMg4A",
+            "resource_type": "youtube_video",
+            "duration": "PT11M44S",
+            "difficulty": null,
+            "tags": [
+              "yt:cc=on",
+              "what is reactjs",
+              "reactjs projects",
+              "react website tutorial",
+              "real-time projects",
+              "small projects",
+              "reactjs applications",
+              "reactjs for beginners",
+              "beginner react website tutorial",
+              "react project",
+              "react js project",
+              "react website",
+              "fully responsive react website",
+              "react project ideas",
+              "beginner react project",
+              "react js website",
+              "website built with react",
+              "build a website with react js",
+              "learn react js",
+              "how to learn react js",
+              "edureka reactjs projects",
+              "edureka reactjs",
+              "edureka"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "React-Js-Projects",
+            "description": "This repository contains a collection of simple and beginner-friendly React.js projects aimed at learning and practicing essential concepts of React development. These projects will serve as a foundation for understanding React and building more complex applications in the future.",
+            "url": "https://github.com/ankita34359/React-Js-Projects",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Code-Interpreter-ReAct-LangChain-Agent",
+            "description": "This project combines two functionalities: a Code Interpreter using LLM Agent Orchestration and Tool Utilization, and a ReAct LangChain Agent example.ReAct agent using LangChain, integrated with a custom tool to calculate the length of a given text. It serves as a foundational example for building more complex, tool-augmented LLM applications.",
+            "url": "https://github.com/junfanz1/Code-Interpreter-ReAct-LangChain-Agent",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "agent",
+              "langchain",
+              "langsmith",
+              "large",
+              "llm",
+              "openai",
+              "react"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Design and implement a complex application.",
+          "Utilize all learned concepts.",
+          "Employ best practices for maintainability and scalability."
+        ],
+        "estimated_hours": 10.0,
+        "deadline": "2024-11-24 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 6,
+        "title": "Refactoring and Optimization of the Complex Application",
+        "description": "Refactor and optimize your previous week's project.",
+        "resources": [
+          {
+            "title": "Essential AI prompts for developers",
+            "description": "Get any AI to work super hard for you with these 4 prompt techniques. You can use these prompts for pretty much anything, - not ...",
+            "url": "https://www.youtube.com/watch?v=H3M95i4iS5c",
+            "resource_type": "youtube_video",
+            "duration": "PT8M31S",
+            "difficulty": null,
+            "tags": [
+              "vscode",
+              "visual studio code",
+              "vs code"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "React Formik Writing Form without Tears #01",
+            "description": "React JS Full Course | 30 Hours Training Full Playlist for React JS Full Course ...",
+            "url": "https://www.youtube.com/watch?v=3xMiK5mVBpM",
+            "resource_type": "youtube_video",
+            "duration": "PT14M32S",
+            "difficulty": null,
+            "tags": [
+              "react",
+              "react js",
+              "react-formik",
+              "react-forms",
+              "react-form-validation",
+              "useFormik",
+              "formik forms",
+              "react forms",
+              "form validation",
+              "javascript",
+              "redux",
+              "react-redux",
+              "HOC",
+              "Hooks"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Get to know GitHub Copilot in VS Code and be productive IMMEDIATELY",
+            "description": "This video takes you through all of the places to find GitHub Copilot in your editor and how to interact with it, along with best kept ...",
+            "url": "https://www.youtube.com/watch?v=jXp5D5ZnxGM",
+            "resource_type": "youtube_video",
+            "duration": "PT4M45S",
+            "difficulty": null,
+            "tags": [
+              "vscode",
+              "githubcopilot",
+              "ai",
+              "coding"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Refactor code for improved readability and maintainability.",
+          "Optimize performance of the application.",
+          "Implement additional testing.",
+          "Improve code quality through code reviews"
+        ],
+        "estimated_hours": 8.0,
+        "deadline": "2024-12-01 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      }
+    ],
+    "created_at": "2025-07-26 23:34:46.449457",
+    "last_updated": "2025-07-26 23:34:46.449457",
+    "overall_progress": 0.0
+  },
+  "progress_updates": [],
+  "adaptive_recommendations": [],
+  "created_at": "2025-07-26 23:34:46.449457",
+  "last_updated": "2025-07-26 23:34:46.449457"
+}

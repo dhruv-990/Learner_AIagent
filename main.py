@@ -81,6 +81,7 @@ async def create_learning_path(request: TopicRequest):
         )
         return {"success": True, "learning_path": learning_path.model_dump()}
     except Exception as e:
+        print("Error in /create-learning-path:", e)  # <--- Add this line
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/update-progress")
