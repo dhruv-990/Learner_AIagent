@@ -38,6 +38,12 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-4">
+                    <a href="/login" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all">
+                        <i class="fas fa-sign-in-alt mr-2"></i>Sign In
+                    </a>
+                    <a href="/signup" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all">
+                        <i class="fas fa-user-plus mr-2"></i>Sign Up
+                    </a>
                     <a href="/progress-dashboard" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all">
                         <i class="fas fa-chart-line mr-2"></i>Dashboard
                     </a>
@@ -131,6 +137,10 @@
                         >
                             <i class="fas fa-magic mr-2"></i>Create My Learning Path
                         </button>
+                        <p class="text-sm text-gray-600 mt-3 text-center">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            You'll be redirected to the dashboard to create your learning path
+                        </p>
                     </div>
                 </form>
 
@@ -194,42 +204,16 @@
         document.getElementById('learningPathForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = new FormData(this);
-            const data = {
-                topic: formData.get('topic'),
-                experience_level: formData.get('experience_level'),
-                time_commitment: formData.get('time_commitment'),
-                learning_goals: formData.get('learning_goals')
-            };
-
-            // Show loading state
-            document.getElementById('submitBtn').style.display = 'none';
-            document.getElementById('loadingState').classList.add('show');
-
-            try {
-                const response = await fetch('/create-learning-path', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                const result = await response.json();
-                
-                if (result.success) {
-                    displayLearningPath(result.learning_path);
-                } else {
-                    alert('Error creating learning path: ' + result.detail);
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred while creating your learning path.');
-            } finally {
-                // Hide loading state
-                document.getElementById('submitBtn').style.display = 'block';
-                document.getElementById('loadingState').classList.remove('show');
+            // Check if user is authenticated
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                // Redirect to login if not authenticated
+                window.location.href = '/login';
+                return;
             }
+            
+            // If authenticated, redirect to dashboard to create learning path
+            window.location.href = '/progress-dashboard';
         });
 
         function displayLearningPath(learningPath) {

@@ -14,7 +14,7 @@ class LearningPathService:
         self.youtube_service = youtube_service
         self.notion_service = notion_service
     
-    async def create_learning_path(self, topic: str, experience_level: str, time_commitment: str, learning_goals: Optional[str] = None) -> LearningPath:
+    async def create_learning_path(self, topic: str, experience_level: str, time_commitment: str, learning_goals: Optional[str] = None, user_id: str = None) -> LearningPath:
         """Create a comprehensive learning path using all services"""
         
         # Generate base learning path using AI service
@@ -81,6 +81,7 @@ class LearningPathService:
         
         # Create LearningPath
         learning_path = LearningPath(
+            user_id=user_id or "anonymous",
             topic=topic,
             experience_level=ExperienceLevel(experience_level),
             time_commitment=TimeCommitment(time_commitment),

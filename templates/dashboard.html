@@ -40,6 +40,9 @@
                     <a href="/" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all">
                         <i class="fas fa-plus mr-2"></i>New Path
                     </a>
+                    <button onclick="logout()" class="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-all">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
                 </div>
             </div>
         </div>
@@ -51,6 +54,85 @@
         <div class="mb-8">
             <h2 class="text-3xl font-bold text-gray-800 mb-2">Your Learning Progress</h2>
             <p class="text-gray-600">Track your progress and get personalized recommendations</p>
+        </div>
+
+        <!-- Learning Path Creation -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-plus text-green-500 mr-2"></i>Create New Learning Path
+            </h3>
+            <form id="learningPathForm" class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="topic" class="block text-sm font-medium text-gray-700 mb-2">Learning Topic</label>
+                        <input 
+                            type="text" 
+                            id="topic" 
+                            name="topic" 
+                            placeholder="e.g., Web3, DevOps, Machine Learning..."
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                            required
+                        >
+                    </div>
+                    <div>
+                        <label for="experience_level" class="block text-sm font-medium text-gray-700 mb-2">Experience Level</label>
+                        <select 
+                            id="experience_level" 
+                            name="experience_level"
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                            required
+                        >
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="time_commitment" class="block text-sm font-medium text-gray-700 mb-2">Time Commitment</label>
+                        <select 
+                            id="time_commitment" 
+                            name="time_commitment"
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                            required
+                        >
+                            <option value="2-5 hours per week">2-5 hours per week</option>
+                            <option value="5-10 hours per week" selected>5-10 hours per week</option>
+                            <option value="10-15 hours per week">10-15 hours per week</option>
+                            <option value="15+ hours per week">15+ hours per week</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="learning_goals" class="block text-sm font-medium text-gray-700 mb-2">Learning Goals (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="learning_goals" 
+                            name="learning_goals" 
+                            placeholder="e.g., Build a web app, Get certified..."
+                            class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
+                        >
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button 
+                        type="submit" 
+                        id="submitBtn"
+                        class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition-all font-medium"
+                    >
+                        <i class="fas fa-magic mr-2"></i>Create Learning Path
+                    </button>
+                </div>
+            </form>
+            <div id="loadingState" class="hidden mt-4 text-center">
+                <div class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm text-white bg-blue-500 rounded-md">
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Creating your personalized learning path...
+                </div>
+            </div>
         </div>
 
         <!-- Topic Selection -->
@@ -222,7 +304,17 @@
             }
 
             try {
-                const response = await fetch(`/learning-path/${encodeURIComponent(topic)}`);
+                const token = localStorage.getItem('access_token');
+                if (!token) {
+                    window.location.href = '/login';
+                    return;
+                }
+
+                const response = await fetch(`/learning-path/${topic}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
                 const result = await response.json();
 
                 if (result.success) {
@@ -390,10 +482,17 @@
             };
 
             try {
+                const token = localStorage.getItem('access_token');
+                if (!token) {
+                    window.location.href = '/login';
+                    return;
+                }
+
                 const response = await fetch('/update-progress', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
                     },
                     body: JSON.stringify(data)
                 });
@@ -421,10 +520,17 @@
             }
 
             try {
+                const token = localStorage.getItem('access_token');
+                if (!token) {
+                    window.location.href = '/login';
+                    return;
+                }
+
                 const response = await fetch('/update-progress', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
                     },
                     body: JSON.stringify({
                         topic: currentLearningPath.topic,
@@ -473,6 +579,180 @@
             html += '</div>';
             content.innerHTML = html;
         }
+
+        // Authentication functions
+        function checkAuth() {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                window.location.href = '/login';
+                return;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('user');
+            window.location.href = '/';
+        }
+
+        // Learning Path Creation Form Handler
+        document.getElementById('learningPathForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingState = document.getElementById('loadingState');
+            
+            // Show loading state
+            submitBtn.style.display = 'none';
+            loadingState.classList.remove('hidden');
+            
+            try {
+                const formData = new FormData(form);
+                const data = {
+                    topic: formData.get('topic'),
+                    experience_level: formData.get('experience_level'),
+                    time_commitment: formData.get('time_commitment'),
+                    learning_goals: formData.get('learning_goals')
+                };
+
+                const token = localStorage.getItem('access_token');
+                if (!token) {
+                    window.location.href = '/login';
+                    return;
+                }
+
+                const response = await fetch('/create-learning-path', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Display the learning path
+                    displayLearningPath(result.learning_path);
+                    // Reset form
+                    form.reset();
+                    alert('Learning path created successfully!');
+                } else {
+                    alert('Error creating learning path: ' + result.detail);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while creating your learning path.');
+            } finally {
+                // Hide loading state
+                submitBtn.style.display = 'block';
+                loadingState.classList.add('hidden');
+            }
+        });
+
+        function displayLearningPath(learningPath) {
+            // Create a new section to display the learning path
+            const mainContent = document.querySelector('main');
+            
+            // Remove existing learning path display if any
+            const existingDisplay = document.getElementById('learningPathDisplay');
+            if (existingDisplay) {
+                existingDisplay.remove();
+            }
+            
+            const displaySection = document.createElement('div');
+            displaySection.id = 'learningPathDisplay';
+            displaySection.className = 'bg-white rounded-xl shadow-lg p-6 mb-8';
+            
+            let html = `
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-road text-green-500 mr-2"></i>Your Learning Path: ${learningPath.topic}
+                </h3>
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600">${learningPath.experience_level}</div>
+                        <div class="text-sm text-gray-600">Experience Level</div>
+                    </div>
+                    <div class="text-center p-4 bg-green-50 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600">${learningPath.time_commitment}</div>
+                        <div class="text-sm text-gray-600">Time Commitment</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600">${learningPath.study_plan.weekly_goals.length}</div>
+                        <div class="text-sm text-gray-600">Weeks</div>
+                    </div>
+                </div>
+            `;
+
+            if (learningPath.learning_goals) {
+                html += `
+                    <div class="mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                        <h4 class="font-semibold text-gray-800 mb-2">Learning Goals:</h4>
+                        <p class="text-gray-700">${learningPath.learning_goals}</p>
+                    </div>
+                `;
+            }
+
+            html += '<div class="space-y-6">';
+            
+            learningPath.study_plan.weekly_goals.forEach((goal, index) => {
+                html += `
+                    <div class="border-2 border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-lg font-bold text-gray-800">Week ${goal.week_number}: ${goal.title}</h4>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                ${goal.estimated_hours} hours
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">${goal.description}</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Objectives:</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                ${goal.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="font-semibold text-gray-800 mb-2">Resources:</h5>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                ${goal.resources.map(resource => `
+                                    <div class="border border-gray-200 rounded-lg p-3">
+                                        <div class="flex items-start space-x-3">
+                                            <div class="flex-shrink-0">
+                                                ${resource.resource_type === 'youtube_video' ? 
+                                                    '<i class="fab fa-youtube text-red-500 text-lg"></i>' :
+                                                    '<i class="fab fa-github text-gray-800 text-lg"></i>'
+                                                }
+                                            </div>
+                                            <div class="flex-1">
+                                                <h6 class="font-medium text-gray-800">${resource.title}</h6>
+                                                <p class="text-sm text-gray-600">${resource.description}</p>
+                                                ${resource.url ? `<a href="${resource.url}" target="_blank" class="text-blue-500 hover:text-blue-700 text-sm">View Resource</a>` : ''}
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            displaySection.innerHTML = html;
+            
+            // Insert after the learning path creation form
+            const formSection = document.getElementById('learningPathForm').closest('.bg-white');
+            formSection.parentNode.insertBefore(displaySection, formSection.nextSibling);
+        }
+
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuth();
+        });
     </script>
 </body>
 </html> 
