@@ -1,0 +1,11 @@
+{
+  "testuser2": {
+    "id": "1",
+    "username": "testuser2",
+    "email": "test2@example.com",
+    "hashed_password": "$2b$12$HUPwUVNbE6RUtvWdgD6aze4YVPXo1tToJozixWCyVNShOkT4LOBAC",
+    "is_active": true,
+    "created_at": "2025-08-11T03:21:56.617002",
+    "last_login": "2025-08-10T21:51:58.875134+00:00"
+  }
+}

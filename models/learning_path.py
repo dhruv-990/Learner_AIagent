@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from pydantic.networks import EmailStr
 from typing import List, Optional, Dict, Any
 from datetime import datetime, timedelta
 from enum import Enum
@@ -21,6 +22,31 @@ class ResourceType(str, Enum):
     COURSE = "course"
     BOOK = "book"
     PRACTICE_EXERCISE = "practice_exercise"
+
+class User(BaseModel):
+    id: Optional[str] = None
+    username: str = Field(..., min_length=3, max_length=50)
+    email: EmailStr
+    hashed_password: str
+    is_active: bool = True
+    created_at: datetime = Field(default_factory=datetime.now)
+    last_login: Optional[datetime] = None
+
+class UserCreate(BaseModel):
+    username: str = Field(..., min_length=3, max_length=50)
+    email: EmailStr
+    password: str = Field(..., min_length=6)
+
+class UserLogin(BaseModel):
+    username: str
+    password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    username: Optional[str] = None
 
 class LearningResource(BaseModel):
     title: str
@@ -64,6 +90,8 @@ class StudyPlan(BaseModel):
     overall_progress: float = 0.0
 
 class LearningPath(BaseModel):
+    id: Optional[str] = None
+    user_id: str
     topic: str
     experience_level: ExperienceLevel
     time_commitment: TimeCommitment
