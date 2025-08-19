@@ -7,5 +7,14 @@
     "is_active": true,
     "created_at": "2025-08-11T03:21:56.617002",
     "last_login": "2025-08-10T21:51:58.875134+00:00"
+  },
+  "abcd123": {
+    "id": "2",
+    "username": "abcd123",
+    "email": "ddhruv166@gmail.com",
+    "hashed_password": "$2b$12$OKD2S963ngX8U/CnHyptHuNwQSFsM4AAzIi2NY/mbe20K/3S7wkpS",
+    "is_active": true,
+    "created_at": "2025-08-11T03:23:29.236720",
+    "last_login": "2025-08-10T21:54:47.701531+00:00"
   }
 }

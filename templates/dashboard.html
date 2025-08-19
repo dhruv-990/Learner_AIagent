@@ -752,7 +752,140 @@
         // Check authentication on page load
         document.addEventListener('DOMContentLoaded', function() {
             checkAuth();
+            // Load dashboard data after authentication check
+            loadDashboardData();
         });
+        
+        async function loadDashboardData() {
+            try {
+                const token = localStorage.getItem('access_token');
+                if (!token) {
+                    return; // Already redirected by checkAuth
+                }
+                
+                // Load dashboard statistics
+                const statsResponse = await fetch('/api/dashboard-stats', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                
+                if (statsResponse.ok) {
+                    const statsData = await statsResponse.json();
+                    if (statsData.success) {
+                        updateDashboardStats(statsData.stats);
+                    }
+                }
+                
+                // Load user learning paths
+                const pathsResponse = await fetch('/api/user-learning-paths', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                
+                if (pathsResponse.ok) {
+                    const pathsData = await pathsResponse.json();
+                    if (pathsData.success) {
+                        displayUserLearningPaths(pathsData.learning_paths);
+                    }
+                }
+                
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+            }
+        }
+        
+        function updateDashboardStats(stats) {
+            // Update progress cards
+            const overallProgress = document.getElementById('overallProgress');
+            const weeksCompleted = document.getElementById('weeksCompleted');
+            const totalWeeks = document.getElementById('totalWeeks');
+            const nextDeadline = document.getElementById('nextDeadline');
+            
+            if (overallProgress) overallProgress.textContent = `${stats.overall_progress}%`;
+            if (weeksCompleted) weeksCompleted.textContent = stats.completed_weeks;
+            if (totalWeeks) totalWeeks.textContent = `out of ${stats.total_weeks} weeks`;
+            
+            // Update progress bar
+            const progressBar = document.querySelector('.progress-bar-fill');
+            if (progressBar) {
+                progressBar.style.width = `${stats.overall_progress}%`;
+            }
+            
+            // Update next deadline
+            if (nextDeadline) {
+                if (stats.next_deadline) {
+                    const deadline = new Date(stats.next_deadline);
+                    nextDeadline.textContent = deadline.toLocaleDateString();
+                } else {
+                    nextDeadline.textContent = 'No upcoming deadlines';
+                }
+            }
+        }
+        
+        function displayUserLearningPaths(learningPaths) {
+            const currentWeekSection = document.getElementById('currentWeekSection');
+            if (!currentWeekSection || learningPaths.length === 0) return;
+            
+            // Find the most recent or active learning path
+            const activePath = learningPaths[0]; // For now, just take the first one
+            
+            if (activePath && activePath.study_plan && activePath.study_plan.weekly_goals) {
+                const currentWeek = activePath.study_plan.weekly_goals[0]; // First week for now
+                
+                let html = `
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-star text-orange-500 mr-2"></i>Current Week Focus: ${activePath.topic}
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-lg font-semibold text-gray-800">Week ${currentWeek.week_number}: ${currentWeek.title}</h4>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                    ${currentWeek.estimated_hours} hours
+                                </span>
+                            </div>
+                            <p class="text-gray-600">${currentWeek.description}</p>
+                            
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">This Week's Objectives:</h5>
+                                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                    ${currentWeek.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">Resources:</h5>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    ${currentWeek.resources.map(resource => `
+                                        <div class="border border-gray-200 rounded-lg p-3">
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-start space-x-3">
+                                                    <div class="flex-shrink-0">
+                                                        ${resource.resource_type === 'youtube_video' ? 
+                                                            '<i class="fab fa-youtube text-red-500 text-lg"></i>' :
+                                                            '<i class="fab fa-github text-gray-800 text-lg"></i>'
+                                                        }
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <h6 class="font-medium text-gray-800">${resource.title}</h6>
+                                                        <p class="text-sm text-gray-600">${resource.description}</p>
+                                                        ${resource.url ? `<a href="${resource.url}" target="_blank" class="text-blue-500 hover:text-blue-700 text-sm">View Resource</a>` : ''}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                currentWeekSection.innerHTML = html;
+            }
+        }
     </script>
 </body>
 </html> 

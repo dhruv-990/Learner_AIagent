@@ -1,0 +1,689 @@
+{
+  "id": null,
+  "user_id": "1",
+  "topic": "Python Programming",
+  "experience_level": "beginner",
+  "time_commitment": "5-10 hours per week",
+  "learning_goals": "Learn Python basics and build simple projects",
+  "study_plan": {
+    "topic": "Python Programming",
+    "experience_level": "beginner",
+    "time_commitment": "5-10 hours per week",
+    "learning_goals": "Learn Python basics and build simple projects",
+    "total_weeks": 6,
+    "weekly_goals": [
+      {
+        "week_number": 1,
+        "title": "Introduction to Python and Setting up your Environment",
+        "description": "Learn about Python, install necessary software, and understand basic syntax.",
+        "resources": [
+          {
+            "title": "Lec-1: What is Python? Introduction to Python \ud83d\udc0d | Why Python | Where Python is used..",
+            "description": "00:00 - Introduction 00:23 - Introduction to python? 02:35 - Why Python? 06:18 \u2013 Where Python is Used? Subscribe to our new ...",
+            "url": "https://www.youtube.com/watch?v=XIR20HH8mNY",
+            "resource_type": "youtube_video",
+            "duration": "PT7M38S",
+            "difficulty": null,
+            "tags": [
+              "introduction to python",
+              "learn python programming",
+              "programming",
+              "python",
+              "python 3",
+              "python basics",
+              "python course",
+              "python for beginners",
+              "python from scratch",
+              "python programming",
+              "python tutorial for beginners",
+              "web development",
+              "what is python?",
+              "python kya hai",
+              "python full explanation",
+              "features of python",
+              "What are basics of Python?",
+              "What is Python explain?",
+              "application of python",
+              "computer-science",
+              "data-science",
+              "machine-learning",
+              "artificial-intelligence",
+              "software-development",
+              "algorithms"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Introduction to Python Programming | Python for Beginners #lec1",
+            "description": "DSA with Java Course Enrollment link: ...",
+            "url": "https://www.youtube.com/watch?v=DInMru2Eq6E",
+            "resource_type": "youtube_video",
+            "duration": "PT11M14S",
+            "difficulty": null,
+            "tags": [
+              "operating system",
+              "data structure and algorithms",
+              "jayanti khatri lamba",
+              "jennys lectures",
+              "jennys lectures baby",
+              "C++",
+              "C++ complete course",
+              "c++ placement course",
+              "gate cs lectures",
+              "ugc net computer science preparation",
+              "ugc net syllabus",
+              "c++ jennys lectures",
+              "object oriented programming in C++",
+              "introduction to python programming",
+              "python full course for beginners",
+              "python jennys lectures",
+              "java programming",
+              "best channel to learn programming",
+              "c programming"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "15 Minute Python Tutorial For Beginners In Hindi (Full &amp; Complete Python Crash Course)",
+            "description": "Python Udemy Course: https://goharry.in/python Get this course at 90% Discount if you use this link Source Code ...",
+            "url": "https://www.youtube.com/watch?v=fr1f84rg4Nw",
+            "resource_type": "youtube_video",
+            "duration": "PT17M37S",
+            "difficulty": null,
+            "tags": [
+              "python tutorial hindi",
+              "python in hindi",
+              "learn python hindi",
+              "python tutorial in hindi",
+              "python tutorial in hindi by saurabh shukla",
+              "python tutorials for beginners in hindi",
+              "python tutorial for beginners in hindi",
+              "learn python fast",
+              "python hindi lectures",
+              "python hindi course",
+              "python hindi crash course",
+              "15 Minute Python Tutorial",
+              "python course hindi",
+              "python complete hindi",
+              "python hindi complete",
+              "complete python tutorial in hindi",
+              "complete python programming in hindi"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Introduction-to-Python-with-Finance-Workshop",
+            "description": "Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. This Python Programming Tutorial covers the instillation python and setting up the python development environment. This video covers setting up a system variable for using python from the windows command prompt and also covers using python from the built in IDLE IDE. After setting up the development an environment this video demonstrates how to create and run your first python script (Hello World).",
+            "url": "https://github.com/malikfahad/Introduction-to-Python-with-Finance-Workshop",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "alx_be_python",
+            "description": "This project serves as a gentle introduction to the world of Python programming. You\u2019ll explore what Python is, its applications, and gain practical experience setting up your development environment.",
+            "url": "https://github.com/achrafkassimi/alx_be_python",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Install Python and a suitable IDE (VS Code recommended)",
+          "Understand basic Python syntax (variables, data types, operators)",
+          "Write your first 'Hello, World!' program",
+          "Learn how to use the Python interpreter"
+        ],
+        "estimated_hours": 3.0,
+        "deadline": "2024-03-10 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 2,
+        "title": "Control Flow and Data Structures",
+        "description": "Master conditional statements, loops, and fundamental data structures.",
+        "resources": [
+          {
+            "title": "Python Programming Tutorial - Control structures",
+            "description": "In this Python Programming video tutorial you will learn about control structures (sequential selection and iterative control ...",
+            "url": "https://www.youtube.com/watch?v=kIPpTYjareA",
+            "resource_type": "youtube_video",
+            "duration": "PT10M51S",
+            "difficulty": null,
+            "tags": [
+              "control structures",
+              "sequential control",
+              "selection control",
+              "iterative control",
+              "python",
+              "python tutorials",
+              "python video tutorials"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python Break, Continue, and Pass Statements: Enhancing Control Flow in Loops | Edukron | Python",
+            "description": "Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective ...",
+            "url": "https://www.youtube.com/watch?v=3_xdHFcJeuc",
+            "resource_type": "youtube_video",
+            "duration": "PT6M49S",
+            "difficulty": null,
+            "tags": [
+              "#PythonFlowControl",
+              "#BreakStatement",
+              "#ContinueStatement",
+              "#PassStatement",
+              "#PythonProgramming",
+              "#LoopControl",
+              "#ConditionalStatements",
+              "#FlowManipulation",
+              "#PythonTutorials",
+              "#ProgrammingTips"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Introduction to Python Programming | Python for Beginners #lec1",
+            "description": "DSA with Java Course Enrollment link: ...",
+            "url": "https://www.youtube.com/watch?v=DInMru2Eq6E",
+            "resource_type": "youtube_video",
+            "duration": "PT11M14S",
+            "difficulty": null,
+            "tags": [
+              "operating system",
+              "data structure and algorithms",
+              "jayanti khatri lamba",
+              "jennys lectures",
+              "jennys lectures baby",
+              "C++",
+              "C++ complete course",
+              "c++ placement course",
+              "gate cs lectures",
+              "ugc net computer science preparation",
+              "ugc net syllabus",
+              "c++ jennys lectures",
+              "object oriented programming in C++",
+              "introduction to python programming",
+              "python full course for beginners",
+              "python jennys lectures",
+              "java programming",
+              "best channel to learn programming",
+              "c programming"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "War-Game-Python-Project",
+            "description": "(Object-Oriented Programming (OOP) | Abstraction | Inheritance | Method Implementation | Data Structures| Algorithm Design | Printing and Output Formatting | Control Flow | Documentation | Error Handling",
+            "url": "https://github.com/david101967/War-Game-Python-Project",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python-Basics",
+            "description": "Python Basics Repository Discover essential Python concepts with our curated collection of small Python projects and programs. Ideal for learners of all levels, these practical examples cover data structures, control flow, functions, and more. Boost your Python skills with hands-on learning.  Happy coding and enjoy your Python journey!",
+            "url": "https://github.com/Jhaveri-Jeet/Python-Basics",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "python",
+              "python-basics"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Understand conditional statements (if, elif, else)",
+          "Learn about loops (for, while)",
+          "Work with lists, tuples, and dictionaries"
+        ],
+        "estimated_hours": 5.0,
+        "deadline": "2024-03-17 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 3,
+        "title": "Functions and Modules",
+        "description": "Learn to create and use functions and import modules.",
+        "resources": [
+          {
+            "title": "Lec-39: Function in Python | How Function works | Python for beginners",
+            "description": "Subscribe to our new channel:https://www.youtube.com/@varunainashots 0:00 - Function Definition 1:25 - Functions in Python ...",
+            "url": "https://www.youtube.com/watch?v=jpqi_HRdpGA",
+            "resource_type": "youtube_video",
+            "duration": "PT8M14S",
+            "difficulty": null,
+            "tags": [
+              "fuctions in python",
+              "functions",
+              "use of function",
+              "how to use functions in python",
+              "python coding",
+              "python for beginners",
+              "functions definition",
+              "how to define functions",
+              "define function in program",
+              "define functions in python",
+              "benefit of functions",
+              "function declaration",
+              "function define",
+              "function call",
+              "python",
+              "functions in python",
+              "python functions",
+              "input from user in python",
+              "local variable",
+              "global variable",
+              "function scope",
+              "python global variables",
+              "local variable vs global variable"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python Functions in Telugu | Python Tutorials in Telugu | Python Telugu",
+            "description": "Click Here for Python Course in Telugu https://pythonlife.in/python-course-in-telugu.html Telegram: ...",
+            "url": "https://www.youtube.com/watch?v=En6XznyAbrg",
+            "resource_type": "youtube_video",
+            "duration": "PT15M44S",
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python Programming - Functions Part-I",
+            "description": "CBSE Class XII Computer Science - Functions in Python - Part-I.",
+            "url": "https://www.youtube.com/watch?v=Y_cMmmZ4nr4",
+            "resource_type": "youtube_video",
+            "duration": "PT16M36S",
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "upsplus",
+            "description": "UPS Plus is a new generation of UPS power management module. It is an improved version of the original UPS prototype. It has been fixed the bug that UPS could not charge and automatically power off during work time. It can not only perform good battery power management, but also provide stable voltage output and RTC functions. At the same time,it support for FCP, AFC, SFCP fast charge protocol, support BC1.2 charging protocol, support battery terminal current/voltage monitoring and support two-way monitoring of charge and discharge. It can provide programmable PVD function. Power Voltage Detector (PVD) can be used to detect if batteries voltage is below or above configured voltage. Once this function has been enabled, it will monitoring your batteries voltage, and you can control whether or not shut down Raspberry Pi via simple bash script or python script. This function will protect your batteries from damage caused by excessive discharge. It can provide Adjustable data sampling Rate. This function allows you to adjust the data sampling rate so that you can get more detailed battery information and also it will consume some power. The data sampling information can communicate with the upper computer device through the I2C protocol. UPS Plus supports the OTA firmware upgrade function. Once there is a new firmware update, it is very convenient for you to upgrade firmware for UPS Plus. The firmware upgrade can be completed only by connecting to the Internet,and execute a python script. Support battery temperature monitoring and power-down memory function. UPS Plus can be set to automatically start the Raspberry Pi after the external power comes on. The programmable shutdown and forced restart function will provide you with a remote power-off restart management method. That means you don\u2019t need to go Unplug the power cable or press the power button to cut off the power again. You can set the program to disconnect the power supply after a few seconds after the Raspberry Pi is shut down properly. And you can also reconnect the power supply after a forced power failure to achieve a remote power-off and restart operation. Once it was setting up, you don't need to press power button to boot up your device which is very suitable for smart home application scenarios.",
+            "url": "https://github.com/geeekpi/upsplus",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python-Basic-programs",
+            "description": "What is Python? Executive Summary Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.   Often, programmers fall in love with Python because of the increased productivity it provides. Since there is no compilation step, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an exception. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself, testifying to Python's introspective power. On the other hand, often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective.  What is Python? Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.  It is used for:  web development (server-side), software development, mathematics, system scripting.  What can Python do?  Python can be used on a server to create web applications. Python can be used alongside software to create workflows. Python can connect to database systems. It can also read and modify files. Python can be used to handle big data and perform complex mathematics. Python can be used for rapid prototyping, or for production-ready software development.  Why Python?  Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). Python has a simple syntax similar to the English language. Python has syntax that allows developers to write programs with fewer lines than some other programming languages. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. Python can be treated in a procedural way, an object-oriented way or a functional way.  Good to know  The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular. In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.  Python Syntax compared to other programming languages  Python was designed for readability, and has some similarities to the English language with influence from mathematics. Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses. Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.  Applications for Python  Python is used in many application domains. Here's a sampling.  The Python Package Index lists thousands of third party modules for Python.  Web and Internet Development  Python offers many choices for web development:  Frameworks such as Django and Pyramid. Micro-frameworks such as Flask and Bottle. Advanced content management systems such as Plone and django CMS.  Python's standard library supports many Internet protocols:  HTML and XML JSON E-mail processing. Support for FTP, IMAP, and other Internet protocols. Easy-to-use socket interface.  And the Package Index has yet more libraries:  Requests, a powerful HTTP client library. Beautiful Soup, an HTML parser that can handle all sorts of oddball HTML. Feedparser for parsing RSS/Atom feeds. Paramiko, implementing the SSH2 protocol. Twisted Python, a framework for asynchronous network programming.  Scientific and Numeric  Python is widely used in scientific and numeric computing:  SciPy is a collection of packages for mathematics, science, and engineering.  Pandas is a data analysis and modeling library. IPython is a powerful interactive shell that features easy editing and recording of a work session, and supports visualizations and parallel computing.  The Software Carpentry Course teaches basic skills for scientific computing, running bootcamps and providing open-access teaching materials. Education Python is a superb language for teaching programming, both at the introductory level and in more advanced courses.  Books such as How to Think Like a Computer Scientist, Python Programming: An Introduction to Computer Science, and Practical Programming. The Education Special Interest Group is a good place to discuss teaching issues. Desktop GUIs The Tk GUI library is included with most binary distributions of Python.  Some toolkits that are usable on several platforms are available separately:  wxWidgets Kivy, for writing multitouch applications. Qt via pyqt or pyside Platform-specific toolkits are also available:  GTK+ Microsoft Foundation Classes through the win32 extensions Software Development Python is often used as a support language for software developers, for build control and management, testing, and in many other ways.  SCons for build control.  Buildbot and Apache Gump for automated continuous compilation and testing. Roundup or Trac for bug tracking and project management. Business Applications Python is also used to build ERP and e-commerce systems:  Odoo is an all-in-one management software that offers a range of business applications that form a complete suite of enterprise management applications. Try ton is a three-tier high-level general purpose application platform.",
+            "url": "https://github.com/sanusanth/Python-Basic-programs",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Define and call functions",
+          "Understand function parameters and return values",
+          "Import and use external modules (e.g., math, random)"
+        ],
+        "estimated_hours": 6.0,
+        "deadline": "2024-03-24 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 4,
+        "title": "Working with Files",
+        "description": "Learn how to read and write data to files.",
+        "resources": [
+          {
+            "title": "Python Basics Tutorial Video | Working With Files and Classes | Simplilearn",
+            "description": "Artificial Intelligence Engineer (IBM) ...",
+            "url": "https://www.youtube.com/watch?v=AgPGzYlMhho",
+            "resource_type": "youtube_video",
+            "duration": "PT16M39S",
+            "difficulty": null,
+            "tags": [
+              "simplilearn",
+              "Python (Programming Language)",
+              "python tutorial",
+              "python programming tutorial",
+              "python programming for beginners",
+              "python programming advanced",
+              "python programming applications",
+              "python programming basics",
+              "best python programming tutorial",
+              "python programming course",
+              "python programming classes",
+              "python programming concepts",
+              "python programming examples",
+              "what is python programming"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "File Handling in Python | Python Tutorials in Telugu | Python in Telugu",
+            "description": "Click Here for Python Course in Telugu https://pythonlife.in/python-course-in-telugu.html Telegram: ...",
+            "url": "https://www.youtube.com/watch?v=CCLq1mE0-08",
+            "resource_type": "youtube_video",
+            "duration": "PT9M5S",
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "#65 Python Tutorial for Beginners | File handling",
+            "description": "Check out our courses: Java Spring Boot AI Live Course: https://go.telusko.com/JavaSpringBootAI Coupon: TELUSKO20 (20% ...",
+            "url": "https://www.youtube.com/watch?v=aequTxAvQq4",
+            "resource_type": "youtube_video",
+            "duration": "PT12M14S",
+            "difficulty": null,
+            "tags": [
+              "telusko",
+              "navin",
+              "reddy",
+              "tutorial",
+              "java",
+              "python"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "GFFUtils",
+            "description": "Python module and utility programs for working with GFF files",
+            "url": "https://github.com/fls-bioinformatics-core/GFFUtils",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "VIPBot",
+            "description": "If you already know everything about hosting a bot, you can skip this text file. If not, I'll quickly run through the process of creating a Discord Bot account with you so you can get started with your own custom Discord bot. Also I'll give you a brief overview of the possible ways to host a bot.   == 1) CREATING A DISCORD BOT ACCOUNT == You need a Discord bot account to be able to run the code I've written for you. - Make sure you're logged on the Discord *website* here: https://discord.com/ - Open up this page in your web browser: https://discord.com/developers/applications - Click the \"New Application\" button on the top right. - Give your application a name and then click \"Create\". - Create a Bot account by navigating to the \"Bot\" tab and clicking \"Add Bot\". - If you want your bot to be able to invited by others, tick the \"Public Bot\" checkbox. - Copy the Token using the \"Copy\" button. - Replace TOKEN in the config.json with the bot token you just copied. WARNING: Do not UNDER ANY CIRCUMSTANCES share this Token with anyone as it's like a password for your bot. A Discord employee will never ask for it. Also, if your Bot is public and someone gets hold of the Token, they can wreak havoc on any server that the bot is on, including potentially deleting all messages. If your Token got leaked, make sure to click \"Regnerate\" as fast as possible to minimize the damage.   == 2) INVITING THE BOT TO YOUR SERVER == Now that your bot has been created, you can invite it to your server. - Now click the \"OAuth2\" tab on the application page you were on for creating your bot. - Tick the \"bot\" checkbox under \"Scopes\" - Tick the permissions your bot will need to function properly. You can find the necessary permissions in the text file called \"Needed permissions.txt\" - you can also give your bot the Administrator permission, but keep in mind that this means that the bot has every possible permission. - In the \"Scopes\" section you will find the link to invite your bot to any server that you have the \"Manage Server\" permission on.   == 3) HOSTING THE BOT == There are in general two ways to host your bot: Either you host the bot yourself on your computer (or any other local machine you have physical access to like a Raspberry Pi or even a smartphone) or you host it on a VPS (= Virtual Private Server), which is basically a small, cheap server that runs 24/7. Both have advantages and disadvantages: - When you host the bot on a local device, it's way easier to setup the bot and get running quickly, yet you have to keep that device powered on all the time, which might be undesirable. - A cheap VPS will cost you a few bucks monthly and you have to use SSH to connect to it and set it up, but it will be powered on 24/7 and will usually be a better overall solution for such a bot.   == 3a) HOSTING THE BOT ON A LOCAL DEVICE == To run the bot on a local device, you need to have Python installed and install the necessary modules for Python. You can download the newest version of Python here: https://www.python.org/. Make sure to let the installer include Python in $PATH. Now install the modules. You can do that on Windows by navigating into the folder where this text document is, pressing Shift + Right click anywhere in the folder, clicking \"Open in PowerShell\" and running this command: python -m pip install -r requirements.txt The steps should be very similar on Linux and macOS. If it says something along the lines of \"'python' not found\", try it with python3 instead or without \"python -m\" entirely and if it still doesn't work, your Python installation might be screwed up. Try reinstalling Python. To run your bot, just run \"python main.py\" (without quotation marks); \"python3\" instead of \"python\" might work too. If you get a message that looks like \"python: can't open file 'main.py': [Errno 2] No such file or directory\", you're probably not in the right folder with your command prompt.   == 3b) HOSTING THE BOT ON A VPS == The process of hosting your bot on a VPS is more complicated and will inevitably require you to do most of the research on your own, but I can boil it down to the following steps (considering that your VPS runs some Linux distribution like Debian or CentOS - if it runs Windows, install a Linux distribution). In general: - First of all, get the VPS up and running and establish a connection to it via SSH* (native on Linux and Mac, use PuTTY on Windows for that) on your machine. - Transfer the whole folder with the bot over to the VPS over e.g. SFTP (you could use FileZilla for that and don't use normal FTP, it's not secure). - Configure the VPS to your needs (like installing Python and other needed programs and libraries). - Get a supervisor running (you could use supervisord for that) and let it take care of running your bot. - Take security measures like closing unneeded ports, using keyfiles for SSH, not allowing root connections with SSH etc. - Think of a good backup strategy, in case something happens to the valuable data on your VPS. If you're using a VPS, it's very easy to screw something up (like not properly securing the SSH connection with keyfiles), so please do *A LOT* of research on how to run and maintain a VPS, otherwise you might end up having your database leaked or something similar. If you have further questions about hosting a Discord bot, just hit me up, I'll be glad to help. But I will not host your bot. * SSH = Secure Shell, a way to securely build up a remote connection to a server and use the command line in it, also includes SFTP for file transfer   == 4) VPS CHOICE == The discord.py community recommends the following VPS providers: - https://scaleway.com/ - Incredibly cheap but powerful VPSes, owned by https://online.net/, based in Europe. - https://digitalocean.com/ - US-based cheap VPSes. The gold standard. Locations available world wide. - https://ovh.co.uk/ - Cheap VPSes, used by many people. France and Canadian locations available. - https://time4vps.eu/ - Cheap VPSes, seemingly based in Lithuania. - https://linode.com/ - More cheap VPSes! - https://vultr.com/ - US-based, DigitalOcean-like. - https://galaxygate.net/ - A reliable, affordable, and trusted host, Used by Dank Memer, Rythm, and many other people. Using one of the cheaper options is usually a good start and will do just fine for small bots (up to a around hundred servers) and most providers will give you a way to smoothly upgrade your current plan. But it of course also depends on what your bot can do: Does it save a lot (= many gigabytes) data, is it usually in many voice channels, does it do image/video manipulation a lot? But there are lots of other providers, just do a Google search and you'll be sure to find the right one. Be wary of free hosting providers like Heraku, those services are not made to host Discord bots and you'll run into issues when trying to do so (believe me, I've fallen for them myself). If you have a spare Raspberry Pi, you can theoretically use it, but it will have subpar performance (especially if it's older or weaker than the Raspberry Pi 3B+).   That's about it, hopefully this helped you. If there's something wrong with your bot or something's not working, contact me. - Mikael.",
+            "url": "https://github.com/Mikael/VIPBot",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "python"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Open, read, and write text files",
+          "Handle file exceptions",
+          "Work with different file modes"
+        ],
+        "estimated_hours": 5.0,
+        "deadline": "2024-03-31 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 5,
+        "title": "Introduction to Object-Oriented Programming (OOP)",
+        "description": "Grasp the fundamental concepts of OOP in Python.",
+        "resources": [
+          {
+            "title": "Python OOP Tutorials | Classes and Instances | Introduction to Object Oriented Programming OOP",
+            "description": "In this Python Tutorial for Beginners Video, I am going to give the Introduction to Object-Oriented Programming (OOP). I will start ...",
+            "url": "https://www.youtube.com/watch?v=OV0eg1UrBTA",
+            "resource_type": "youtube_video",
+            "duration": "PT19M48S",
+            "difficulty": null,
+            "tags": [
+              "Windows 10",
+              "Python (Programming Language)",
+              "Python 3.6",
+              "Python",
+              "Install Python",
+              "Download",
+              "Python 3.x.x",
+              "Programming Language (Software Genre)",
+              "Python Tutorial",
+              "Python Tutorial for Beginners",
+              "Absolute Beginners",
+              "Python for Beginners",
+              "Python course",
+              "python tutorial",
+              "python scripting tutorial",
+              "Online Course",
+              "Python Guru",
+              "Learn Python",
+              "python 3.7",
+              "Python 3",
+              "Functions in Python",
+              "Python Class",
+              "Python Class examples",
+              "Classes and Objects",
+              "Python Object Oriented",
+              "python 3 class"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Lec-52: Introduction to OOPs in Python \ud83d\udc0d | Object Oriented Programming Easiest Explanation",
+            "description": "00:00 \u2013 why OOPs are important? 02:47 \u2013 Objects 04:43 \u2013 classes In Python, Object-Oriented Programming (OOP) allows you to ...",
+            "url": "https://www.youtube.com/watch?v=2qQ5wMCnKxQ",
+            "resource_type": "youtube_video",
+            "duration": "PT6M47S",
+            "difficulty": null,
+            "tags": [
+              "Python",
+              "Python programming",
+              "python for beginners",
+              "python machine learning",
+              "python basics",
+              "python binary search",
+              "python interview",
+              "python interview questions",
+              "python programming gate",
+              "python programming class 11th",
+              "python for beginner",
+              "python programming basics",
+              "Python data scientist",
+              "python execution",
+              "Jupyter python",
+              "Python tutorials",
+              "python programs",
+              "gate smashers",
+              "gate smashers python",
+              "oops in python",
+              "python object oriented programming",
+              "class in python",
+              "objects in python"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "#48 Python Tutorial for Beginners | Object Oriented Programming | Introduction",
+            "description": "Check out our courses: AI Powered DevOps with AWS - Live Course :- https://go.telusko.com/AIDevOps-AWS Coupon: ...",
+            "url": "https://www.youtube.com/watch?v=gZwPdqC2Os0",
+            "resource_type": "youtube_video",
+            "duration": "PT7M2S",
+            "difficulty": null,
+            "tags": [
+              "telusko",
+              "navin",
+              "reddy",
+              "tutorial",
+              "java",
+              "python"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "12SDD-object-oriented-programming-skyrim-unit",
+            "description": "Introduction to OOP using Python (Skyrim Example)",
+            "url": "https://github.com/fong-a/12SDD-object-oriented-programming-skyrim-unit",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Introduction-to-Python",
+            "description": "CodeWithHarry - Complete Python Bootcamp: Completed a comprehensive Python course covering fundamental concepts, data structures, object-oriented programming (OOP), and practical projects.",
+            "url": "https://github.com/haseeb8118/Introduction-to-Python",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Understand classes and objects",
+          "Work with attributes and methods",
+          "Learn about inheritance and polymorphism (basic concepts)"
+        ],
+        "estimated_hours": 8.0,
+        "deadline": "2024-04-07 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      },
+      {
+        "week_number": 6,
+        "title": "Project: Simple Python Application",
+        "description": "Build a small application consolidating your learned skills.",
+        "resources": [
+          {
+            "title": "15 Minute Python Tutorial For Beginners In Hindi (Full &amp; Complete Python Crash Course)",
+            "description": "Python Udemy Course: https://goharry.in/python Get this course at 90% Discount if you use this link Source Code ...",
+            "url": "https://www.youtube.com/watch?v=fr1f84rg4Nw",
+            "resource_type": "youtube_video",
+            "duration": "PT17M37S",
+            "difficulty": null,
+            "tags": [
+              "python tutorial hindi",
+              "python in hindi",
+              "learn python hindi",
+              "python tutorial in hindi",
+              "python tutorial in hindi by saurabh shukla",
+              "python tutorials for beginners in hindi",
+              "python tutorial for beginners in hindi",
+              "learn python fast",
+              "python hindi lectures",
+              "python hindi course",
+              "python hindi crash course",
+              "15 Minute Python Tutorial",
+              "python course hindi",
+              "python complete hindi",
+              "python hindi complete",
+              "complete python tutorial in hindi",
+              "complete python programming in hindi"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Learn Python in Less than 10 Minutes for Beginners (Fast &amp; Easy)",
+            "description": "In this crash course I'll be teaching you the basics of Python in less than 10 minutes. Python is super easy to learn compared to ...",
+            "url": "https://www.youtube.com/watch?v=fWjsdhR3z3c",
+            "resource_type": "youtube_video",
+            "duration": "PT10M30S",
+            "difficulty": null,
+            "tags": [
+              "code palace",
+              "cde palace",
+              "code palce",
+              "palace code"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python For Beginners in Telugu [PART 1] || Code with Swaroop || Zero to Hero || Introduction",
+            "description": "Join https://www.codewithswaroop.com . . . \u2713Download our App: ...",
+            "url": "https://www.youtube.com/watch?v=GmdGv5ndX54",
+            "resource_type": "youtube_video",
+            "duration": "PT15M46S",
+            "difficulty": null,
+            "tags": [
+              "python in telugu",
+              "python for beginners in telugu",
+              "python for beginners",
+              "python full course in telugu",
+              "python telugu",
+              "python tutorial for beginners",
+              "python tutorial telugu",
+              "python telugu tutorials",
+              "python",
+              "python interview questions in telugu",
+              "learn python in telugu",
+              "python tutorial in telugu",
+              "telugu computer world python",
+              "telugu python language",
+              "python tutorial",
+              "python full course",
+              "python course",
+              "coding for beginners in telugu",
+              "python tutorials in telugu"
+            ],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Python-Basic-programs",
+            "description": "What is Python? Executive Summary Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.   Often, programmers fall in love with Python because of the increased productivity it provides. Since there is no compilation step, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an exception. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself, testifying to Python's introspective power. On the other hand, often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective.  What is Python? Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.  It is used for:  web development (server-side), software development, mathematics, system scripting.  What can Python do?  Python can be used on a server to create web applications. Python can be used alongside software to create workflows. Python can connect to database systems. It can also read and modify files. Python can be used to handle big data and perform complex mathematics. Python can be used for rapid prototyping, or for production-ready software development.  Why Python?  Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). Python has a simple syntax similar to the English language. Python has syntax that allows developers to write programs with fewer lines than some other programming languages. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. Python can be treated in a procedural way, an object-oriented way or a functional way.  Good to know  The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular. In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.  Python Syntax compared to other programming languages  Python was designed for readability, and has some similarities to the English language with influence from mathematics. Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses. Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.  Applications for Python  Python is used in many application domains. Here's a sampling.  The Python Package Index lists thousands of third party modules for Python.  Web and Internet Development  Python offers many choices for web development:  Frameworks such as Django and Pyramid. Micro-frameworks such as Flask and Bottle. Advanced content management systems such as Plone and django CMS.  Python's standard library supports many Internet protocols:  HTML and XML JSON E-mail processing. Support for FTP, IMAP, and other Internet protocols. Easy-to-use socket interface.  And the Package Index has yet more libraries:  Requests, a powerful HTTP client library. Beautiful Soup, an HTML parser that can handle all sorts of oddball HTML. Feedparser for parsing RSS/Atom feeds. Paramiko, implementing the SSH2 protocol. Twisted Python, a framework for asynchronous network programming.  Scientific and Numeric  Python is widely used in scientific and numeric computing:  SciPy is a collection of packages for mathematics, science, and engineering.  Pandas is a data analysis and modeling library. IPython is a powerful interactive shell that features easy editing and recording of a work session, and supports visualizations and parallel computing.  The Software Carpentry Course teaches basic skills for scientific computing, running bootcamps and providing open-access teaching materials. Education Python is a superb language for teaching programming, both at the introductory level and in more advanced courses.  Books such as How to Think Like a Computer Scientist, Python Programming: An Introduction to Computer Science, and Practical Programming. The Education Special Interest Group is a good place to discuss teaching issues. Desktop GUIs The Tk GUI library is included with most binary distributions of Python.  Some toolkits that are usable on several platforms are available separately:  wxWidgets Kivy, for writing multitouch applications. Qt via pyqt or pyside Platform-specific toolkits are also available:  GTK+ Microsoft Foundation Classes through the win32 extensions Software Development Python is often used as a support language for software developers, for build control and management, testing, and in many other ways.  SCons for build control.  Buildbot and Apache Gump for automated continuous compilation and testing. Roundup or Trac for bug tracking and project management. Business Applications Python is also used to build ERP and e-commerce systems:  Odoo is an all-in-one management software that offers a range of business applications that form a complete suite of enterprise management applications. Try ton is a three-tier high-level general purpose application platform.",
+            "url": "https://github.com/sanusanth/Python-Basic-programs",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [],
+            "estimated_completion_time": null
+          },
+          {
+            "title": "Simple-Python-Mini-Projects",
+            "description": "From utilities like converters and calculators to interactive games and trackers, each project emphasizes Python's capability for both learning and real-world application development",
+            "url": "https://github.com/ShravanDalavi/Simple-Python-Mini-Projects",
+            "resource_type": "github_project",
+            "duration": null,
+            "difficulty": null,
+            "tags": [
+              "coding",
+              "developer",
+              "mini-projects",
+              "mini-projects-in-python",
+              "programming",
+              "python",
+              "python-mini-projects",
+              "python3",
+              "pythoncode",
+              "pythondeveloper",
+              "pythonlearning",
+              "pythonprogramming",
+              "pythonprojects"
+            ],
+            "estimated_completion_time": null
+          }
+        ],
+        "objectives": [
+          "Design and implement a simple application (e.g., a calculator, a to-do list, a simple text-based game)",
+          "Use learned concepts like functions, loops, data structures, file handling"
+        ],
+        "estimated_hours": 10.0,
+        "deadline": "2024-04-14 00:00:00",
+        "completed": false,
+        "progress_percentage": 0.0
+      }
+    ],
+    "created_at": "2025-08-11 03:22:27.588224",
+    "last_updated": "2025-08-11 03:22:27.588224",
+    "overall_progress": 0.0
+  },
+  "progress_updates": [],
+  "adaptive_recommendations": [],
+  "created_at": "2025-08-11 03:22:27.588224",
+  "last_updated": "2025-08-11 03:22:27.588224"
+}

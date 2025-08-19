@@ -1,0 +1,98 @@
+{
+  "1": [
+    {
+      "id": null,
+      "user_id": "1",
+      "topic": "html",
+      "experience_level": "beginner",
+      "time_commitment": "5-10 hours per week",
+      "learning_goals": "",
+      "study_plan": {
+        "topic": "html",
+        "experience_level": "beginner",
+        "time_commitment": "5-10 hours per week",
+        "learning_goals": "",
+        "total_weeks": 6,
+        "weekly_goals": [
+          {
+            "week_number": 1,
+            "title": "HTML Basics: Structure and Elements",
+            "description": "Learn the fundamental structure of an HTML document and common HTML elements.",
+            "resources": [
+              {
+                "title": "Html tutorial for beginners | Introduction | HTML | Lec-01 | Bhanu Priya",
+                "description": "Hypertext Markup Language ( HTML ) HTML introduction #html #computerscience #htmltutorials #htmltutorialforbeginners ...",
+                "url": "https://www.youtube.com/watch?v=x9bTBcron78",
+                "resource_type": "youtube_video",
+                "duration": "PT8M26S",
+                "difficulty": null,
+                "tags": [
+                  "html introduction",
+                  "introduction to html",
+                  "introduction html",
+                  "html introduction tutorial",
+                  "html",
+                  "html5"
+                ],
+                "estimated_completion_time": null
+              },
+              {
+                "title": "HTML in 9 Minutes (in Hindi) 🌐",
+                "description": "Python Udemy Course: https://goharry.in/python Get this course at 90% Discount if you use this link Learn HTML in Hindi: In this ...",
+                "url": "https://www.youtube.com/watch?v=Ut4RpySLM6Y",
+                "resource_type": "youtube_video",
+                "duration": "PT9M9S",
+                "difficulty": null,
+                "tags": [
+                  "html",
+                  "html tutorial",
+                  "html in 9 minutes",
+                  "learn html in hindi",
+                  "learn html",
+                  "html tags",
+                  "html attributes",
+                  "html self closing tags",
+                  "html syntax",
+                  "html fast",
+                  "learn html fast",
+                  "learn html in minutes",
+                  "build websites using html",
+                  "history of html",
+                  "tim berners lee html",
+                  "how html was created",
+                  "html history",
+                  "html 4 history",
+                  "html 5 history",
+                  "html 2 history",
+                  "html early days",
+                  "html early days development",
+                  "development of html",
+                  "html codewithharry",
+                  "codewithharry html"
+                ],
+                "estimated_completion_time": null
+              },
+              {
+                "title": "HTML Basic Structure for Beginners | Learn HTML Structure in 5 Minutes (Quick Tutorial) #video #html",
+                "description": "YouTube Description Welcome to this quick HTML tutorial for beginners! In just 2 minutes, you'll learn the basic structure of an ...",
+                "url": "https://www.youtube.com/watch?v=XRntttkk_ek",
+                "resource_type": "youtube_video",
+                "duration": "PT4M39S",
+                "difficulty": null,
+                "tags": [
+                  "html basics",
+                  "learn html",
+                  "html tutorial",
+                  "html for beginners"
+                ],
+                "estimated_completion_time": null
+              }
+            ],
+            "objectives": [
+              "Understand the basic structure of an HTML document.",
+              "Learn how to create headings, paragraphs, and images.",
+              "Understand HTML tags, attributes, and elements.",
+              "Practice creating simple HTML pages."
+            ],
+            "estimated_hours": 5.0,
+            "deadline": 

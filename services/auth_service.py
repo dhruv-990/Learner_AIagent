@@ -3,9 +3,9 @@ from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from typing import Optional
 import os
-import json
 from datetime import datetime, timedelta, timezone
 from models.learning_path import User, UserCreate, TokenData
+from services.data_service import DataService
 
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -15,48 +15,8 @@ SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-change-in-production")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-# File-based user storage
-USERS_FILE = "users.json"
-
-def load_users():
-    """Load users from JSON file"""
-    try:
-        if os.path.exists(USERS_FILE):
-            with open(USERS_FILE, 'r') as f:
-                data = json.load(f)
-                users = {}
-                for username, user_data in data.items():
-                    # Convert string dates back to datetime objects
-                    if user_data.get('created_at'):
-                        user_data['created_at'] = datetime.fromisoformat(user_data['created_at'])
-                    if user_data.get('last_login'):
-                        user_data['last_login'] = datetime.fromisoformat(user_data['last_login'])
-                    users[username] = User(**user_data)
-                return users
-    except Exception as e:
-        print(f"Warning: Could not load users from file: {e}")
-    return {}
-
-def save_users(users):
-    """Save users to JSON file"""
-    try:
-        # Convert datetime objects to ISO format strings for JSON serialization
-        data = {}
-        for username, user in users.items():
-            user_dict = user.model_dump()
-            if user_dict.get('created_at'):
-                user_dict['created_at'] = user_dict['created_at'].isoformat()
-            if user_dict.get('last_login'):
-                user_dict['last_login'] = user_dict['last_login'].isoformat()
-            data[username] = user_dict
-        
-        with open(USERS_FILE, 'w') as f:
-            json.dump(data, f, indent=2)
-    except Exception as e:
-        print(f"Warning: Could not save users to file: {e}")
-
-# Load existing users
-users_db = load_users()
+# Initialize data service
+data_service = DataService()
 
 class AuthService:
     def __init__(self):
@@ -99,16 +59,17 @@ class AuthService:
     def register_user(self, user_create: UserCreate) -> User:
         """Register a new user"""
         # Check if username already exists
-        if user_create.username in users_db:
+        existing_user = data_service.get_user_by_username(user_create.username)
+        if existing_user:
             raise ValueError("Username already registered")
         
         # Check if email already exists
-        for user in users_db.values():
+        for user in data_service.users.values():
             if user.email == user_create.email:
                 raise ValueError("Email already registered")
         
         # Create new user
-        user_id = str(len(users_db) + 1)  # Simple ID generation
+        user_id = str(len(data_service.users) + 1)  # Simple ID generation
         hashed_password = self.get_password_hash(user_create.password)
         
         user = User(
@@ -118,13 +79,12 @@ class AuthService:
             hashed_password=hashed_password
         )
         
-        users_db[user_create.username] = user
-        save_users(users_db)
+        data_service.save_user(user)
         return user
     
     def authenticate_user(self, username: str, password: str) -> Optional[User]:
         """Authenticate a user with username and password"""
-        user = users_db.get(username)
+        user = data_service.get_user_by_username(username)
         if not user:
             return None
         if not self.verify_password(password, user.hashed_password):
@@ -132,16 +92,13 @@ class AuthService:
         
         # Update last login
         user.last_login = datetime.now(timezone.utc)
-        save_users(users_db)
+        data_service.save_user(user)
         return user
     
     def get_user_by_username(self, username: str) -> Optional[User]:
         """Get user by username"""
-        return users_db.get(username)
+        return data_service.get_user_by_username(username)
     
     def get_user_by_id(self, user_id: str) -> Optional[User]:
         """Get user by ID"""
-        for user in users_db.values():
-            if user.id == user_id:
-                return user
-        return None 
+        return data_service.get_user_by_id(user_id) 

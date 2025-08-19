@@ -1,0 +1,20 @@
+{
+  "abcd123": {
+    "id": "1",
+    "username": "abcd123",
+    "email": "ddhruv166@gmail.com",
+    "hashed_password": "$2b$12$gfKl1sEGLklq5qeT.Bm9CeRD7yYQScn4UjNgeLfXh//PXN2x4zfEm",
+    "is_active": true,
+    "created_at": "2025-08-11T15:47:27.592402",
+    "last_login": "2025-08-19T18:08:46.281663+00:00"
+  },
+  "rohanyadav": {
+    "id": "2",
+    "username": "rohanyadav",
+    "email": "rohangood123@gmail.com",
+    "hashed_password": "$2b$12$21KoDboH1tpAGvbIiC8Dtee9fxE1czpoVTz0RYIRkzEFLOKVWVyzS",
+    "is_active": true,
+    "created_at": "2025-08-19T23:41:45.019045",
+    "last_login": null
+  }
+}

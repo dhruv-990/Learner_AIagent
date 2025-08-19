@@ -7,12 +7,14 @@ from models.learning_path import (
     LearningPath, StudyPlan, WeeklyGoal, LearningResource, 
     ProgressUpdate, ExperienceLevel, TimeCommitment, ResourceType
 )
+from services.data_service import DataService
 
 class LearningPathService:
     def __init__(self, ai_service, youtube_service, notion_service):
         self.ai_service = ai_service
         self.youtube_service = youtube_service
         self.notion_service = notion_service
+        self.data_service = DataService()
     
     async def create_learning_path(self, topic: str, experience_level: str, time_commitment: str, learning_goals: Optional[str] = None, user_id: str = None) -> LearningPath:
         """Create a comprehensive learning path using all services"""
@@ -92,6 +94,10 @@ class LearningPathService:
         # Store in Notion/local storage
         await self.notion_service.store_learning_path(learning_path)
         
+        # Save to DataService for persistence
+        if user_id:
+            self.data_service.save_learning_path(user_id, learning_path)
+        
         return learning_path
     
     async def update_progress(self, topic: str, completed_items: List[str], current_progress: str, challenges_faced: Optional[str] = None) -> LearningPath:
@@ -135,8 +141,15 @@ class LearningPathService:
         
         return learning_path
     
-    async def get_learning_path(self, topic: str) -> Optional[LearningPath]:
+    async def get_learning_path(self, topic: str, user_id: str = None) -> Optional[LearningPath]:
         """Get existing learning path for a topic"""
+        # First try to get from DataService if user_id is provided
+        if user_id:
+            user_path = self.data_service.get_learning_path_by_topic(user_id, topic)
+            if user_path:
+                return user_path
+        
+        # Fallback to Notion service
         return await self.notion_service.get_learning_path(topic)
     
     async def get_github_projects(self, topic: str, max_results: int = 10) -> List[Dict[str, Any]]:

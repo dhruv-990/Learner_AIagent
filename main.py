@@ -195,7 +195,7 @@ async def get_learning_path(topic: str, current_user: User = Depends(get_current
     """Get existing learning path for a topic"""
     try:
         _, _, _, learning_path_service, _ = get_services()
-        learning_path = await learning_path_service.get_learning_path(topic)
+        learning_path = await learning_path_service.get_learning_path(topic, user_id=current_user.id)
         if learning_path:
             return {"success": True, "learning_path": learning_path.model_dump()}
         else:
@@ -232,6 +232,28 @@ async def health_check():
 async def progress_dashboard(request: Request):
     """Progress dashboard page"""
     return templates.TemplateResponse("dashboard.html", {"request": request})
+
+@app.get("/api/dashboard-stats")
+async def get_dashboard_stats(current_user: User = Depends(get_current_user)):
+    """Get dashboard statistics for the current user"""
+    try:
+        from services.data_service import DataService
+        data_service = DataService()
+        stats = data_service.get_user_dashboard_stats(current_user.id)
+        return {"success": True, "stats": stats}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/user-learning-paths")
+async def get_user_learning_paths(current_user: User = Depends(get_current_user)):
+    """Get all learning paths for the current user"""
+    try:
+        from services.data_service import DataService
+        data_service = DataService()
+        paths = data_service.get_user_learning_paths(current_user.id)
+        return {"success": True, "learning_paths": [path.model_dump() for path in paths]}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
     import uvicorn
