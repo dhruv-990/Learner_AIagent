@@ -64,6 +64,29 @@ class DataService:
                     path_dict = path.model_dump()
                     if path_dict.get('created_at'):
                         path_dict['created_at'] = path_dict['created_at'].isoformat()
+                    if path_dict.get('last_updated'):
+                        path_dict['last_updated'] = path_dict['last_updated'].isoformat()
+                    
+                    # Serialize study plan dates
+                    if path_dict.get('study_plan'):
+                        study_plan = path_dict['study_plan']
+                        if study_plan.get('created_at'):
+                            study_plan['created_at'] = study_plan['created_at'].isoformat()
+                        if study_plan.get('last_updated'):
+                            study_plan['last_updated'] = study_plan['last_updated'].isoformat()
+                        
+                        # Serialize weekly goals dates
+                        if study_plan.get('weekly_goals'):
+                            for goal in study_plan['weekly_goals']:
+                                if goal.get('deadline'):
+                                    goal['deadline'] = goal['deadline'].isoformat()
+                    
+                    # Serialize progress updates
+                    if path_dict.get('progress_updates'):
+                        for update in path_dict['progress_updates']:
+                            if update.get('timestamp'):
+                                update['timestamp'] = update['timestamp'].isoformat()
+                    
                     serialized[user_id].append(path_dict)
             return serialized
         
@@ -72,11 +95,20 @@ class DataService:
             serialized = {}
             for user_id, user_progress in data.items():
                 serialized[user_id] = {}
-                for topic, progress in user_progress.items():
-                    progress_dict = progress.model_dump()
-                    if progress_dict.get('timestamp'):
-                        progress_dict['timestamp'] = progress_dict['timestamp'].isoformat()
-                    serialized[user_id][topic] = progress_dict
+                for topic, progress_list in user_progress.items():
+                    if isinstance(progress_list, list):
+                        serialized[user_id][topic] = []
+                        for progress in progress_list:
+                            progress_dict = progress.model_dump()
+                            if progress_dict.get('timestamp'):
+                                progress_dict['timestamp'] = progress_dict['timestamp'].isoformat()
+                            serialized[user_id][topic].append(progress_dict)
+                    else:
+                        # Handle single progress update
+                        progress_dict = progress_list.model_dump()
+                        if progress_dict.get('timestamp'):
+                            progress_dict['timestamp'] = progress_dict['timestamp'].isoformat()
+                        serialized[user_id][topic] = progress_dict
             return serialized
         
         return data
@@ -102,6 +134,29 @@ class DataService:
                 for path_data in user_paths:
                     if path_data.get('created_at'):
                         path_data['created_at'] = datetime.fromisoformat(path_data['created_at'])
+                    if path_data.get('last_updated'):
+                        path_data['last_updated'] = datetime.fromisoformat(path_data['last_updated'])
+                    
+                    # Deserialize study plan dates
+                    if path_data.get('study_plan'):
+                        study_plan = path_data['study_plan']
+                        if study_plan.get('created_at'):
+                            study_plan['created_at'] = datetime.fromisoformat(study_plan['created_at'])
+                        if study_plan.get('last_updated'):
+                            study_plan['last_updated'] = datetime.fromisoformat(study_plan['last_updated'])
+                        
+                        # Deserialize weekly goals dates
+                        if study_plan.get('weekly_goals'):
+                            for goal in study_plan['weekly_goals']:
+                                if goal.get('deadline'):
+                                    goal['deadline'] = datetime.fromisoformat(goal['deadline'])
+                    
+                    # Deserialize progress updates
+                    if path_data.get('progress_updates'):
+                        for update in path_data['progress_updates']:
+                            if update.get('timestamp'):
+                                update['timestamp'] = datetime.fromisoformat(update['timestamp'])
+                    
                     paths[user_id].append(LearningPath(**path_data))
             return paths
         
@@ -111,9 +166,17 @@ class DataService:
             for user_id, user_progress in data.items():
                 progress[user_id] = {}
                 for topic, progress_data in user_progress.items():
-                    if progress_data.get('timestamp'):
-                        progress_data['timestamp'] = datetime.fromisoformat(progress_data['timestamp'])
-                    progress[user_id][topic] = ProgressUpdate(**progress_data)
+                    if isinstance(progress_data, list):
+                        progress[user_id][topic] = []
+                        for prog in progress_data:
+                            if prog.get('timestamp'):
+                                prog['timestamp'] = datetime.fromisoformat(prog['timestamp'])
+                            progress[user_id][topic].append(ProgressUpdate(**prog))
+                    else:
+                        # Handle single progress update
+                        if progress_data.get('timestamp'):
+                            progress_data['timestamp'] = datetime.fromisoformat(progress_data['timestamp'])
+                        progress[user_id][topic] = ProgressUpdate(**progress_data)
             return progress
         
         return data
@@ -172,17 +235,41 @@ class DataService:
         if user_id not in self.progress:
             self.progress[user_id] = {}
         
-        self.progress[user_id][topic] = progress
+        # Store progress as a list to maintain history
+        if topic not in self.progress[user_id]:
+            self.progress[user_id][topic] = []
+        
+        # If it's not a list, convert it
+        if not isinstance(self.progress[user_id][topic], list):
+            self.progress[user_id][topic] = [self.progress[user_id][topic]]
+        
+        self.progress[user_id][topic].append(progress)
         self._save_data(self.progress_file, self.progress)
     
-    def get_user_progress(self, user_id: str) -> Dict[str, ProgressUpdate]:
+    def get_user_progress(self, user_id: str) -> Dict[str, List[ProgressUpdate]]:
         """Get all progress for a user"""
-        return self.progress.get(user_id, {})
-    
-    def get_topic_progress(self, user_id: str, topic: str) -> Optional[ProgressUpdate]:
-        """Get progress for a specific topic"""
         user_progress = self.progress.get(user_id, {})
-        return user_progress.get(topic)
+        # Ensure all progress entries are lists
+        for topic, progress in user_progress.items():
+            if not isinstance(progress, list):
+                user_progress[topic] = [progress]
+        return user_progress
+    
+    def get_topic_progress(self, user_id: str, topic: str) -> List[ProgressUpdate]:
+        """Get progress history for a specific topic"""
+        user_progress = self.progress.get(user_id, {})
+        topic_progress = user_progress.get(topic, [])
+        
+        # Ensure it's a list
+        if not isinstance(topic_progress, list):
+            topic_progress = [topic_progress]
+        
+        return topic_progress
+    
+    def get_latest_topic_progress(self, user_id: str, topic: str) -> Optional[ProgressUpdate]:
+        """Get the latest progress update for a specific topic"""
+        progress_list = self.get_topic_progress(user_id, topic)
+        return progress_list[-1] if progress_list else None
     
     # Dashboard statistics
     def get_user_dashboard_stats(self, user_id: str) -> Dict[str, Any]:
@@ -194,43 +281,44 @@ class DataService:
         completed_weeks = 0
         overall_progress = 0
         next_deadline = None
+        active_paths = 0
         
         for path in user_paths:
             if path.study_plan and path.study_plan.weekly_goals:
                 total_weeks += len(path.study_plan.weekly_goals)
                 
-                # Check progress for this topic
-                topic_progress = user_progress.get(path.topic)
-                if topic_progress:
-                    # Calculate completed weeks based on completed items
-                    completed_items = set(topic_progress.completed_items)
-                    for goal in path.study_plan.weekly_goals:
-                        # Check if all objectives for this week are completed
-                        week_completed = all(
-                            any(item.lower() in completed_items for item in [goal.title] + goal.objectives)
-                        )
-                        if week_completed:
-                            completed_weeks += 1
+                # Check if this path has any progress
+                topic_progress_list = user_progress.get(path.topic, [])
+                if topic_progress_list:
+                    active_paths += 1
+                    latest_progress = topic_progress_list[-1] if topic_progress_list else None
+                    
+                    if latest_progress and latest_progress.completed_items:
+                        # Calculate completed weeks based on completed items
+                        completed_items_set = set(item.lower().strip() for item in latest_progress.completed_items)
+                        
+                        for goal in path.study_plan.weekly_goals:
+                            # Check if week is marked as completed or if key objectives are completed
+                            week_objectives = [obj.lower().strip() for obj in goal.objectives]
+                            goal_title = goal.title.lower().strip()
+                            
+                            # Week is completed if title matches or majority of objectives are completed
+                            objectives_completed = sum(1 for obj in week_objectives if any(obj in item or item in obj for item in completed_items_set))
+                            title_completed = any(goal_title in item or item in goal_title for item in completed_items_set)
+                            
+                            if title_completed or objectives_completed >= len(week_objectives) * 0.6:
+                                completed_weeks += 1
+                                goal.completed = True
                 
-                # Calculate overall progress percentage
-                if path.study_plan and path.study_plan.weekly_goals:
-                    topic_progress = user_progress.get(path.topic)
-                    if topic_progress and topic_progress.completed_items:
-                        topic_progress_percentage = len(topic_progress.completed_items) / (len(path.study_plan.weekly_goals) * 3) * 100
-                        overall_progress += topic_progress_percentage
+                # Calculate progress percentage for this path
+                path_progress = path.calculate_overall_progress()
+                overall_progress += path_progress
                 
-                # Find next deadline (next uncompleted week)
-                if path.study_plan and path.study_plan.weekly_goals:
-                    for goal in path.study_plan.weekly_goals:
-                        topic_progress = user_progress.get(path.topic)
-                        if topic_progress:
-                            week_completed = all(
-                                any(item.lower() in topic_progress.completed_items for item in [goal.title] + goal.objectives)
-                            )
-                            if not week_completed:
-                                # Calculate deadline (7 days from now for next week)
-                                next_deadline = datetime.now(timezone.utc) + timedelta(days=7)
-                                break
+                # Find next deadline (earliest uncompleted week across all paths)
+                current_goal = path.get_current_week_goal()
+                if current_goal and current_goal.deadline:
+                    if next_deadline is None or current_goal.deadline < next_deadline:
+                        next_deadline = current_goal.deadline
         
         # Calculate average progress
         if user_paths:
@@ -240,7 +328,7 @@ class DataService:
             "total_weeks": total_weeks,
             "completed_weeks": completed_weeks,
             "overall_progress": round(overall_progress, 1),
-            "next_deadline": next_deadline,
+            "next_deadline": next_deadline.isoformat() if next_deadline else None,
             "total_paths": len(user_paths),
-            "active_paths": len([p for p in user_paths if p.topic in user_progress])
-        } 
+            "active_paths": active_paths
+        }

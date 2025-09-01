@@ -100,46 +100,64 @@ class LearningPathService:
         
         return learning_path
     
-    async def update_progress(self, topic: str, completed_items: List[str], current_progress: str, challenges_faced: Optional[str] = None) -> LearningPath:
-        """Update progress and get adaptive recommendations"""
-        
-        # Get existing learning path
-        learning_path = await self.notion_service.get_learning_path(topic)
-        if not learning_path:
-            raise Exception(f"Learning path for topic '{topic}' not found")
-        
-        # Create progress update
-        progress_update = ProgressUpdate(
-            topic=topic,
-            completed_items=completed_items,
-            current_progress=current_progress,
-            challenges_faced=challenges_faced
-        )
-        
-        # Get adaptive recommendations
-        recommendations = await self.ai_service.generate_adaptive_recommendations(
-            topic=topic,
-            current_progress=current_progress,
-            challenges_faced=challenges_faced,
-            completed_items=completed_items
-        )
-        
-        # Update learning path
-        learning_path.progress_updates.append(progress_update)
-        learning_path.adaptive_recommendations.extend(recommendations)
-        learning_path.last_updated = datetime.now()
-        
-        # Update completed goals
-        for item in completed_items:
-            for goal in learning_path.study_plan.weekly_goals:
-                if item in goal.title or any(item in obj for obj in goal.objectives):
-                    goal.completed = True
-                    goal.progress_percentage = 100.0
-        
-        # Store updated learning path
-        await self.notion_service.store_learning_path(learning_path)
-        
-        return learning_path
+    async def update_progress(self, topic: str, completed_items: List[str], current_progress: str, challenges_faced: Optional[str] = None, user_id: Optional[str] = None) -> StudyPlan:
+        """Update progress for a learning path and provide adaptive recommendations"""
+        try:
+            # Get the learning path
+            learning_path = await self.get_learning_path(topic, user_id)
+            if not learning_path:
+                raise ValueError(f"Learning path not found for topic: {topic}")
+            
+            # Create progress update
+            progress_update = ProgressUpdate(
+                topic=topic,
+                completed_items=completed_items,
+                current_progress=current_progress,
+                challenges_faced=challenges_faced
+            )
+            
+            # Save progress to data service
+            if user_id:
+                self.data_service.save_progress(user_id, topic, progress_update)
+            
+            # Add to learning path progress updates
+            learning_path.progress_updates.append(progress_update)
+            
+            # Update weekly goals completion status based on completed items
+            if completed_items:
+                completed_items_lower = [item.lower().strip() for item in completed_items]
+                
+                for goal in learning_path.study_plan.weekly_goals:
+                    # Check if this week's objectives are completed
+                    goal_title_lower = goal.title.lower().strip()
+                    objectives_lower = [obj.lower().strip() for obj in goal.objectives]
+                    
+                    # Week is completed if title matches or majority of objectives are completed
+                    title_completed = any(goal_title_lower in item or item in goal_title_lower for item in completed_items_lower)
+                    objectives_completed = sum(1 for obj in objectives_lower if any(obj in item or item in obj for item in completed_items_lower))
+                    
+                    if title_completed or objectives_completed >= len(goal.objectives) * 0.6:
+                        goal.completed = True
+                        goal.progress_percentage = 100.0
+                    elif objectives_completed > 0:
+                        goal.progress_percentage = (objectives_completed / len(goal.objectives)) * 100.0
+            
+            # Generate adaptive recommendations based on progress and challenges
+            recommendations = await self._generate_adaptive_recommendations(
+                learning_path, progress_update
+            )
+            learning_path.adaptive_recommendations = recommendations
+            
+            # Update the learning path in storage
+            learning_path.last_updated = datetime.now()
+            if user_id:
+                self.data_service.save_learning_path(user_id, learning_path)
+            
+            return learning_path.study_plan
+            
+        except Exception as e:
+            print(f"Error updating progress: {e}")
+            raise e
     
     async def get_learning_path(self, topic: str, user_id: str = None) -> Optional[LearningPath]:
         """Get existing learning path for a topic"""
@@ -399,4 +417,4 @@ class LearningPathService:
             completed_items=[]
         )
         
-        return recommendations 
+        return recommendations
